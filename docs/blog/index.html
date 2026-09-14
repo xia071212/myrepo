@@ -102,35 +102,6 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -208,29 +179,32 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cGVyc29uYWwlMkNkYXRhLXNjaWVuY2U=" data-listing-date-sort="1781582400000" data-listing-file-modified-sort="1788201253961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="10">
+<div class="quarto-post image-right" data-index="0" data-categories="RWNvbm9taWNzJTJDRGVjaXNpb24tbWFraW5n" data-listing-date-sort="1789358400000" data-listing-file-modified-sort="1789420066178" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="822">
 <div class="thumbnail"><a href="../blog/posts/post1/Untitled.html" class="no-external">
 
-<p class="card-img-top"><img loading='lazy' src="posts/post1/figure1.png"  class="thumbnail-image card-img"/></p>
+<img loading="lazy" src="../images/blog1/sunk-cost.svg" class="thumbnail-image" alt="Past spending is behind us; today&amp;#039;s decision compares future benefits and future costs.">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../blog/posts/post1/Untitled.html" class="no-external">My First Blog Post</a>
+<a href="../blog/posts/post1/Untitled.html" class="no-external">Sunk Costs: Why Past Effort Should Not Decide Your Next Step</a>
 </h3>
 <div class="delink listing-description"><a href="../blog/posts/post1/Untitled.html" class="no-external">
-This is my first blog post. Example <span class="math inline">\(\LaTeX\)</span> equation: <span class="math inline">\(\frac{1}{2}\sum_{i=1}^nx_i\)</span>
+<p>Understanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.</p>
 </a></div>
 </div>
 <div class="metadata">
 <a href="../blog/posts/post1/Untitled.html" class="no-external">
 <div class="listing-date">
-Jun 16, 2026
+Sep 14, 2026
+</div>
+<div class="listing-author">
+Yuting Xia
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="b3BpbmlvbiUyQ2xhYm9yJTIwbWFya2V0" data-listing-date-sort="1781582400000" data-listing-file-modified-sort="1788201253966" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="dXBjb21pbmc=" data-listing-date-sort="1781582400000" data-listing-file-modified-sort="1789410772039" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
 <div class="thumbnail"><a href="../blog/posts/post2/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -238,14 +212,10 @@ Jun 16, 2026
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../blog/posts/post2/index.html" class="no-external">My Second Blog Post</a>
+<a href="../blog/posts/post2/index.html" class="no-external">Blog 2: Web Scraping for Actionable Insights</a>
 </h3>
 <div class="delink listing-description"><a href="../blog/posts/post2/index.html" class="no-external">
-
-
-
-
-
+This article is not yet written. This space is reserved for the next course blog post.
 </a></div>
 </div>
 <div class="metadata">
@@ -332,7 +302,7 @@ Jun 16, 2026
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/xia071212\.github\.io\/myrepo\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -666,7 +636,7 @@ Jun 16, 2026
 <p><img src="../images/UniversityofPennsylvania_FullLogo_RGB.png" class="img-fluid" width="100"></p>
 </div>   
     <div class="nav-footer-center">
-<p>© 2026 Student Name</p>
+<p>© 2026 Yuting Xia</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

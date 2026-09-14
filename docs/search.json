@@ -4,76 +4,118 @@
     "href": "bio.html",
     "title": "About Me",
     "section": "",
-    "text": "Write a short biography here.\nInclude:"
+    "text": "I am Yuting Xia, a graduate student in Applied Economics and Data Science at the University of Pennsylvania. My experience includes securities research at Huatai, data analytics at Tencent, and AI product development at SDIC Cloud Network Technology. I work with Python, Stata, Java, SQL/MySQL, R, and Excel, and am interested in applying economics and data analysis to financial research."
   },
   {
     "objectID": "bio.html#education",
     "href": "bio.html#education",
     "title": "About Me",
     "section": "Education",
-    "text": "Education\nMaster of Applied Economics and Data Science, University of Pennsylvania (expaceted 2027) Batelor of Science, University Name 2026"
+    "text": "Education\nUniversity of Pennsylvania\nM.S. in Applied Economics and Data Science · Expected December 2027\nCentral University of Finance and Economics\nB.A. in Economics (Mathematical Economics and Mathematical Finance) · June 2026\nUniversity of California, Berkeley\nExchange student · August–December 2025"
   },
   {
     "objectID": "bio.html#interests",
     "href": "bio.html#interests",
     "title": "About Me",
     "section": "Interests",
-    "text": "Interests\n\nEconometrics\nMachine Learning\nData Analysis"
+    "text": "Interests\n\nEconometrics and financial research\nMachine learning and data analysis\nHuman–AI collaboration"
   },
   {
     "objectID": "bio.html#contact",
     "href": "bio.html#contact",
     "title": "About Me",
     "section": "Contact",
-    "text": "Contact"
-  },
-  {
-    "objectID": "bio.html#studentemail.edu",
-    "href": "bio.html#studentemail.edu",
-    "title": "About Me",
-    "section": "student@email.edu",
-    "text": "student@email.edu"
+    "text": "Contact\njinmao@sas.upenn.edu"
   },
   {
     "objectID": "blog/index.html",
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "My First Blog Post\n\n\n\n\n\n\n\n\nJun 16, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMy Second Blog Post\n\n\n\n\n\n\n\n\nJun 16, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nBlog 2: Web Scraping for Actionable Insights\n\n\n\n\n\n\n\n\nJun 16, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/post1/Untitled.html",
     "href": "blog/posts/post1/Untitled.html",
-    "title": "My First Blog Post",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
     "section": "",
-    "text": "This is my first blog post. Example \\(\\LaTeX\\) equation: \\(\\frac{1}{2}\\sum_{i=1}^nx_i\\)"
+    "text": "“I’ve already put so much into this. I can’t stop now.”\nWe say it about a disappointing purchase, an unfinished project, or an investment that has gone wrong. Continuing seems to respect the money and effort already spent. Yet economics asks a surprisingly difficult question: if those resources cannot be recovered, why should they determine what we do next?"
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#what-is-a-sunk-cost",
+    "href": "blog/posts/post1/Untitled.html#what-is-a-sunk-cost",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "What is a sunk cost?",
+    "text": "What is a sunk cost?\nA sunk cost is a cost already incurred that cannot be recovered through the choices now available. It can involve money, time, or effort. The defining feature is irreversibility, not how large or painful the cost feels.\nYou have paid for a nonrefundable ticket, but halfway through, you realize you dislike the film. Whether you stay or leave, the ticket payment is gone. What you can still choose is how to spend the rest of the evening.\nStaying cannot recover the payment. If another activity would be more enjoyable, staying only sacrifices more time. That forgone alternative is an opportunity cost: the value of the best option you give up. For more on this example, see OpenStax’s discussion of sunk costs.\n\n\n\nThe ticket is nonrefundable: staying or leaving cannot recover the $20. What remains yours to choose is the next hour."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#why-does-ignoring-it-feel-wrong",
+    "href": "blog/posts/post1/Untitled.html#why-does-ignoring-it-feel-wrong",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "Why does ignoring it feel wrong?",
+    "text": "Why does ignoring it feel wrong?\nWe are taught to avoid waste and reward persistence. Leaving the cinema, abandoning a project, or changing direction can feel like admitting that our earlier judgment was wrong. Continuing lets us hope the original effort will eventually be justified.\nThe confusion is between two questions: “Was my original decision worthwhile?” and “Which choice is better now?” The first evaluates the past; the second guides the future. A bad answer to the first does not automatically make continuing the best answer to the second.\nThe sunk cost fallacy occurs when an unrecoverable past investment pushes us to continue even though the remaining benefits do not justify the remaining costs. Sunk costs themselves are ordinary; the fallacy is allowing them to distort the next decision.\n\n\n\nPast spending is the same under either choice. Compare the consequences that today’s decision can still change."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#three-common-misunderstandings",
+    "href": "blog/posts/post1/Untitled.html#three-common-misunderstandings",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "Three common misunderstandings",
+    "text": "Three common misunderstandings\n“Everything I have already paid is sunk.” Not necessarily. A refundable deposit can still be recovered. Equipment may have resale value. Those recoverable amounts matter because today’s choice determines whether you receive them. What matters is recoverability, rather than simply whether payment happened earlier.\n“Ignoring sunk costs means giving up.” No. Suppose finishing a project costs another $40 and produces $70 of benefits. Continuing adds $30 of value, regardless of the unrecoverable amount already spent. If the benefit were only $30, continuing would instead lose another $10. Assume stopping has no further payoff and these figures include all relevant future consequences.\n“The past no longer matters.” Past experience can reveal whether a plan works, and previous spending affects the resources you still have. Use that information. Also include future exit penalties, switching costs, and the value of alternatives. Ignoring sunk costs means excluding an irreversible cost from the comparison, not erasing history or ignoring constraints."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#one-example-waiting-for-a-stock-to-recover",
+    "href": "blog/posts/post1/Untitled.html#one-example-waiting-for-a-stock-to-recover",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "One example: waiting for a stock to recover",
+    "text": "One example: waiting for a stock to recover\nAn investor buys a share for $100; it is now worth $60. “I’ll sell when I break even” makes the purchase price a target, but does not explain why holding is attractive today.\nThe share still has $60 of sale value, so the asset is not entirely sunk. Holding means choosing to keep that $60 invested. The decision should compare future prospects, risk, alternatives, and relevant costs. A price decline alone proves neither that selling nor holding is best.\n\n\n\n\n\n\nNoteOptional illustration: change the purchase price\n\n\n\n\n\nThis hypothetical example compares holding with selling for $60 and keeping cash for one year. It excludes dividends, interest, taxes, trading costs, and risk adjustment. Changing only the purchase price changes historical profit or loss, but not the expected advantage of holding over selling. Changing the expected future price can reverse that comparison.\n\n  A SMALL EXPERIMENTWould you keep the stock?\n  \n    Original purchase price $100\n    \n    You can sell the share for $60 today.\n    Expected price in one year $50\n    \n    Compare with $60 in cash. No dividends, interest, taxes, trading costs, or risk adjustment.\n  \n  \n    EXPECTED VALUE FROM TODAY\n    Selling is ahead by $10.\n    Hold: $50 expected wealth. Sell: $60 in cash.\n    Sell: result vs. purchase−$40Hold: expected result vs. purchase−$50\n  \n  At a $100 purchase price, $60 current value, and $50 expected future value, selling loses $40 relative to purchase; holding loses $50 in expectation. Changing only the purchase price never changes the $10 expected advantage of selling. Enable JavaScript to adjust the sliders."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#why-this-matters-outside-investing",
+    "href": "blog/posts/post1/Untitled.html#why-this-matters-outside-investing",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "Why this matters outside investing",
+    "text": "Why this matters outside investing\nThe same reasoning helps us reconsider a study method, a business project, or how we spend an evening. Hours already spent cannot be reclaimed, but the next hour can still be used well. Before continuing, identify what is unrecoverable, compare the remaining options, and include what each option requires you to give up.\nThe lesson is not to quit sooner. It is to choose the next step for what it can achieve. Past effort deserves reflection; future effort needs a reason.\n\nSource and illustration. Definition and movie example: OpenStax, Principles of Economics 3e, §2.1, “Sunk Costs” (read the section). Numerical examples and the interactive illustration are hypothetical, not market data. The movie comic was created with AI assistance to illustrate the same principle. Editable article and widget: blog/posts/post1/; illustrations: images/blog1/ in the website repository. Rendering instructions are in its README."
   },
   {
     "objectID": "resume.html",
     "href": "resume.html",
     "title": "Resume",
     "section": "",
-    "text": "Download my resume here:"
+    "text": "My resume is available on request."
   },
   {
-    "objectID": "resume.html#resume-pdf",
-    "href": "resume.html#resume-pdf",
+    "objectID": "resume.html#request-my-resume-by-email",
+    "href": "resume.html#request-my-resume-by-email",
     "title": "Resume",
-    "section": "Resume PDF",
-    "text": "Resume PDF"
+    "section": "Request my resume by email",
+    "text": "Request my resume by email"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Student Name",
+    "title": "Yuting Xia",
     "section": "",
-    "text": "Student Name\nUniversity of Pennsylvaina\nWelcome to my personal website.\n\nQuick Links"
+    "text": "Yuting Xia\nUniversity of Pennsylvania\nWelcome to my personal website. I am pursuing an M.S. in Applied Economics and Data Science, with expected graduation in December 2027.\n\nQuick Links"
+  },
+  {
+    "objectID": "blog/posts/post2/index.html",
+    "href": "blog/posts/post2/index.html",
+    "title": "Blog 2: Web Scraping for Actionable Insights",
+    "section": "",
+    "text": "This article is not yet written. This space is reserved for the next course blog post."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#blog-2",
+    "href": "blog/posts/post2/index.html#blog-2",
+    "title": "Blog 2: Web Scraping for Actionable Insights",
+    "section": "",
+    "text": "This article is not yet written. This space is reserved for the next course blog post."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "About this site\nYuting Xia’s personal website, with a biography, resume, and course blog."
   }
 ]

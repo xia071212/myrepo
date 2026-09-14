@@ -1,9 +1,10 @@
 ---
-title: "My Second Blog Post"
+title: "Blog 2: Web Scraping for Actionable Insights"
 date: 2026-06-16
 categories:
-  - opinion
-  - labor market
+  - upcoming
 ---
 
-## This is my second blog post.
+## Blog 2
+
+This article is not yet written. This space is reserved for the next course blog post.

@@ -6,3 +6,12 @@
 /.quarto/
 
 **/*.quarto_ipynb
+
+# Local operating-system metadata
+.DS_Store
+
+# Private resume copies: keep local, never publish
+/files/*.pdf
+/docs/files/*.pdf
+/README.html
+/README_files/

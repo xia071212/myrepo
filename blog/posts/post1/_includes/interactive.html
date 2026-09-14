@@ -1,0 +1,23 @@
+<script>
+(() => {
+  const past = document.getElementById('past-cost');
+  const future = document.getElementById('future-benefit');
+  if (!past || !future) return;
+  const money = n => `${n < 0 ? '−' : ''}$${Math.abs(n)}`;
+  function update() {
+    const p = Number(past.value), f = Number(future.value), gain = f - 60;
+    document.getElementById('past-value').textContent = money(p);
+    document.getElementById('benefit-value').textContent = money(f);
+    document.getElementById('stop-total').textContent = money(60-p);
+    document.getElementById('continue-total').textContent = money(f-p);
+    document.getElementById('decision').textContent = gain > 0
+      ? `Holding is ahead by ${money(gain)} in expectation.`
+      : gain < 0 ? `Selling is ahead by ${money(-gain)}.`
+      : 'Both choices have the same expected value.';
+    document.getElementById('decision-reason').textContent = `Hold: ${money(f)} expected wealth. Sell: $60 in cash.`;
+  }
+  past.addEventListener('input', update);
+  future.addEventListener('input', update);
+  update();
+})();
+</script>

@@ -4,25 +4,25 @@ title: ""
 
 ::::: columns
 ::: {.column width="35%"}
-![](images/profile.png){width="100%"}
+![](images/profile-yuting.jpg){width="100%" fig-alt="Yuting Xia’s chosen avatar"}
 :::
 
 ::: {.column width="65%"}
-![](images/UniversityofPennsylvania_FullLogo_RGB.png){width="250px"}
+![](images/UniversityofPennsylvania_FullLogo_RGB.png){width="250px" fig-alt="University of Pennsylvania"}
 
-# Student Name
+# Yuting Xia
 
-University of Pennsylvaina
+University of Pennsylvania
 
-Welcome to my personal website.
+Welcome to my personal website. I am pursuing an M.S. in Applied Economics and Data Science, with expected graduation in December 2027.
 
 ### Quick Links
 
-<div>
-  <a href="https://github.com/USERNAME"><i class="bi bi-github fs-3"></i></a>
-  <a href="https://linkedin.com/in/USERNAME"><i class="bi bi-linkedin fs-3"></i></a>
-  <a href="resume.qmd"><i class="bi bi-file-earmark-person-fill fs-3"></i></a>
-  <a href="mailto:student@email.com"><i class="bi bi-envelope-fill fs-3"></i></a>
+<div class="quick-links">
+  <a href="https://github.com/xia071212" aria-label="GitHub" title="GitHub"><i class="bi bi-github fs-3"></i></a>
+  <span class="unavailable-link" role="link" aria-disabled="true" aria-label="LinkedIn — no link available" title="LinkedIn — no link available"><i class="bi bi-linkedin fs-3"></i></span>
+  <a href="resume.qmd" aria-label="Resume" title="Resume"><i class="bi bi-file-earmark-person-fill fs-3"></i></a>
+  <a href="mailto:jinmao@sas.upenn.edu" aria-label="Email" title="Email"><i class="bi bi-envelope-fill fs-3"></i></a>
 </div>
 :::
 :::::

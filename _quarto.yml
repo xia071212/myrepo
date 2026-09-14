@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
+  site-url: https://xia071212.github.io/myrepo/
   title: "Yuting Xia"
-
   navbar:
     left:
       - href: index.qmd
@@ -12,10 +12,9 @@ website:
       - bio.qmd
       - resume.qmd
       - blog/index.qmd
-
   page-footer:
     center: |
-      © 2026 Student Name
+      © 2026 Yuting Xia
     left: |
       ![](/images/UniversityofPennsylvania_FullLogo_RGB.png){width=100px}
 
@@ -24,3 +23,5 @@ format:
     theme: flatly
     css: styles.css
     toc: false
+    lang: en
+    html-math-method: mathml

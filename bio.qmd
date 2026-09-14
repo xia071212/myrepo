@@ -2,27 +2,27 @@
 title: "About Me"
 ---
 
-Write a short biography here.
-
-Include:
-
--   Educational background
--   Professional interests
--   Technical skills
--   Career goals
+I am Yuting Xia, a graduate student in Applied Economics and Data Science at the University of Pennsylvania. My experience includes securities research at Huatai, data analytics at Tencent, and AI product development at SDIC Cloud Network Technology. I work with Python, Stata, Java, SQL/MySQL, R, and Excel, and am interested in applying economics and data analysis to financial research.
 
 ## Education
 
-Master of Applied Economics and Data Science, University of Pennsylvania (expaceted 2027) Batelor of Science, University Name 2026
+**University of Pennsylvania**  
+M.S. in Applied Economics and Data Science · Expected December 2027
+
+**Central University of Finance and Economics**  
+B.A. in Economics (Mathematical Economics and Mathematical Finance) · June 2026
+
+**University of California, Berkeley**  
+Exchange student · August–December 2025
 
 ## Interests
 
--   Econometrics
--   Machine Learning
--   Data Analysis
+- Econometrics and financial research
+- Machine learning and data analysis
+- Human–AI collaboration
 
 ## Contact
 
-## student\@email.edu
+[jinmao@sas.upenn.edu](mailto:jinmao@sas.upenn.edu)
 
 ------------------------------------------------------------------------

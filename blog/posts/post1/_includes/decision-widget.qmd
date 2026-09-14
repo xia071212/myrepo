@@ -1,0 +1,20 @@
+```{=html}
+<section class="decision-widget" aria-label="Explore sunk costs">
+  <div class="widget-heading"><span class="eyebrow">A SMALL EXPERIMENT</span><h3>Would you keep the stock?</h3></div>
+  <div class="widget-controls">
+    <label for="past-cost">Original purchase price <output id="past-value" for="past-cost">$100</output></label>
+    <input id="past-cost" type="range" min="60" max="200" step="10" value="100" aria-describedby="past-help">
+    <p id="past-help" class="control-help">You can sell the share for $60 today.</p>
+    <label for="future-benefit">Expected price in one year <output id="benefit-value" for="future-benefit">$50</output></label>
+    <input id="future-benefit" type="range" min="0" max="120" step="5" value="50" aria-describedby="future-help">
+    <p id="future-help" class="control-help">Compare with $60 in cash. No dividends, interest, taxes, trading costs, or risk adjustment.</p>
+  </div>
+  <div class="widget-result" aria-live="polite" aria-atomic="true">
+    <span class="eyebrow">EXPECTED VALUE FROM TODAY</span>
+    <p id="decision" class="decision-text">Selling is ahead by $10.</p>
+    <p id="decision-reason">Hold: $50 expected wealth. Sell: $60 in cash.</p>
+    <div class="result-totals"><p>Sell: result vs. purchase<br><strong id="stop-total">−$40</strong></p><p>Hold: expected result vs. purchase<br><strong id="continue-total">−$50</strong></p></div>
+  </div>
+  <noscript><p>At a $100 purchase price, $60 current value, and $50 expected future value, selling loses $40 relative to purchase; holding loses $50 in expectation. Changing only the purchase price never changes the $10 expected advantage of selling. Enable JavaScript to adjust the sliders.</p></noscript>
+</section>
+```

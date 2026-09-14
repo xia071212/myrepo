@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-06-16">
+<meta name="author" content="Yuting Xia">
+<meta name="dcterms.date" content="2026-09-14">
+<meta name="description" content="Understanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.">
 
-<title>My First Blog Post – Yuting Xia</title>
+<title>Sunk Costs: Why Past Effort Should Not Decide Your Next Step – Yuting Xia</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,40 +74,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed sunk-cost-post fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -155,22 +128,33 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My First Blog Post</h1>
+<h1 class="title">Sunk Costs: Why Past Effort Should Not Decide Your Next Step</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">personal</div>
-    <div class="quarto-category">data-science</div>
+    <div class="quarto-category">Economics</div>
+    <div class="quarto-category">Decision-making</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Understanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Yuting Xia </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 16, 2026</p>
+      <p class="date">September 14, 2026</p>
     </div>
   </div>
   
@@ -182,13 +166,112 @@ window.Quarto = {
 </header>
 
 
-<p><img src="figure1.png" class="img-fluid" width="500"></p>
-<p>This is my first blog post. Example <span class="math inline">\(\LaTeX\)</span> equation: <span class="math inline">\(\frac{1}{2}\sum_{i=1}^nx_i\)</span></p>
-<hr>
+<p><em>“I’ve already put so much into this. I can’t stop now.”</em></p>
+<p>We say it about a disappointing purchase, an unfinished project, or an investment that has gone wrong. Continuing seems to respect the money and effort already spent. Yet economics asks a surprisingly difficult question: <strong>if those resources cannot be recovered, why should they determine what we do next?</strong></p>
+<section id="what-is-a-sunk-cost" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-sunk-cost">What is a sunk cost?</h2>
+<p>A <strong>sunk cost</strong> is a cost already incurred that cannot be recovered through the choices now available. It can involve money, time, or effort. The defining feature is irreversibility, not how large or painful the cost feels.</p>
+<p>You have paid for a nonrefundable ticket, but halfway through, you realize you dislike the film. Whether you stay or leave, the ticket payment is gone. What you can still choose is how to spend the rest of the evening.</p>
+<p>Staying cannot recover the payment. If another activity would be more enjoyable, staying only sacrifices more time. That forgone alternative is an <strong>opportunity cost</strong>: the value of the best option you give up. For more on this example, see <a href="https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint">OpenStax’s discussion of sunk costs</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/blog1/sunk-cost-movie-comic.png" class="img-fluid figure-img" alt="Three-panel comic: a rabbit buys a nonrefundable $20 cinema ticket, feels bored during the movie, then considers staying or leaving. The ticket cost is unchanged by either choice."></p>
+<figcaption>The ticket is nonrefundable: staying or leaving cannot recover the $20. What remains yours to choose is the next hour.</figcaption>
+</figure>
+</div>
+</section>
+<section id="why-does-ignoring-it-feel-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-ignoring-it-feel-wrong">Why does ignoring it feel wrong?</h2>
+<p>We are taught to avoid waste and reward persistence. Leaving the cinema, abandoning a project, or changing direction can feel like admitting that our earlier judgment was wrong. Continuing lets us hope the original effort will eventually be justified.</p>
+<p>The confusion is between two questions: “Was my original decision worthwhile?” and “Which choice is better now?” The first evaluates the past; the second guides the future. A bad answer to the first does not automatically make continuing the best answer to the second.</p>
+<p>The <strong>sunk cost fallacy</strong> occurs when an unrecoverable past investment pushes us to continue even though the remaining benefits do not justify the remaining costs. Sunk costs themselves are ordinary; the fallacy is allowing them to distort the next decision.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../images/blog1/sunk-cost.svg" class="img-fluid figure-img" alt="Past spending is unrecoverable. From today's decision, compare future benefits and future costs."></p>
+<figcaption>Past spending is the same under either choice. Compare the consequences that today’s decision can still change.</figcaption>
+</figure>
+</div>
+</section>
+<section id="three-common-misunderstandings" class="level2">
+<h2 class="anchored" data-anchor-id="three-common-misunderstandings">Three common misunderstandings</h2>
+<p><strong>“Everything I have already paid is sunk.”</strong> Not necessarily. A refundable deposit can still be recovered. Equipment may have resale value. Those recoverable amounts matter because today’s choice determines whether you receive them. What matters is recoverability, rather than simply whether payment happened earlier.</p>
+<p><strong>“Ignoring sunk costs means giving up.”</strong> No.&nbsp;Suppose finishing a project costs another $40 and produces $70 of benefits. Continuing adds $30 of value, regardless of the unrecoverable amount already spent. If the benefit were only $30, continuing would instead lose another $10. Assume stopping has no further payoff and these figures include all relevant future consequences.</p>
+<p><strong>“The past no longer matters.”</strong> Past experience can reveal whether a plan works, and previous spending affects the resources you still have. Use that information. Also include future exit penalties, switching costs, and the value of alternatives. Ignoring sunk costs means excluding an irreversible cost from the comparison, not erasing history or ignoring constraints.</p>
+</section>
+<section id="one-example-waiting-for-a-stock-to-recover" class="level2">
+<h2 class="anchored" data-anchor-id="one-example-waiting-for-a-stock-to-recover">One example: waiting for a stock to recover</h2>
+<p>An investor buys a share for $100; it is now worth $60. “I’ll sell when I break even” makes the purchase price a target, but does not explain why holding is attractive today.</p>
+<p>The share still has $60 of sale value, so the asset is not entirely sunk. Holding means choosing to keep that $60 invested. The decision should compare future prospects, risk, alternatives, and relevant costs. A price decline alone proves neither that selling nor holding is best.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Optional illustration: change the purchase price
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This hypothetical example compares holding with selling for $60 and keeping cash for one year. It excludes dividends, interest, taxes, trading costs, and risk adjustment. Changing only the purchase price changes historical profit or loss, but not the expected advantage of holding over selling. Changing the expected future price can reverse that comparison.</p>
+<section class="decision-widget" aria-label="Explore sunk costs">
+  <div class="widget-heading"><span class="eyebrow">A SMALL EXPERIMENT</span><h3 class="anchored">Would you keep the stock?</h3></div>
+  <div class="widget-controls">
+    <label for="past-cost">Original purchase price <output id="past-value" for="past-cost">$100</output></label>
+    <input id="past-cost" type="range" min="60" max="200" step="10" value="100" aria-describedby="past-help">
+    <p id="past-help" class="control-help">You can sell the share for $60 today.</p>
+    <label for="future-benefit">Expected price in one year <output id="benefit-value" for="future-benefit">$50</output></label>
+    <input id="future-benefit" type="range" min="0" max="120" step="5" value="50" aria-describedby="future-help">
+    <p id="future-help" class="control-help">Compare with $60 in cash. No dividends, interest, taxes, trading costs, or risk adjustment.</p>
+  </div>
+  <div class="widget-result" aria-live="polite" aria-atomic="true">
+    <span class="eyebrow">EXPECTED VALUE FROM TODAY</span>
+    <p id="decision" class="decision-text">Selling is ahead by $10.</p>
+    <p id="decision-reason">Hold: $50 expected wealth. Sell: $60 in cash.</p>
+    <div class="result-totals"><p>Sell: result vs. purchase<br><strong id="stop-total">−$40</strong></p><p>Hold: expected result vs. purchase<br><strong id="continue-total">−$50</strong></p></div>
+  </div>
+  <noscript><p>At a $100 purchase price, $60 current value, and $50 expected future value, selling loses $40 relative to purchase; holding loses $50 in expectation. Changing only the purchase price never changes the $10 expected advantage of selling. Enable JavaScript to adjust the sliders.</p></noscript>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="why-this-matters-outside-investing" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-outside-investing">Why this matters outside investing</h2>
+<p>The same reasoning helps us reconsider a study method, a business project, or how we spend an evening. Hours already spent cannot be reclaimed, but the next hour can still be used well. Before continuing, identify what is unrecoverable, compare the remaining options, and include what each option requires you to give up.</p>
+<p><strong>The lesson is not to quit sooner. It is to choose the next step for what it can achieve.</strong> Past effort deserves reflection; future effort needs a reason.</p>
+<div class="source-note">
+<p><strong>Source and illustration.</strong> Definition and movie example: OpenStax, <em>Principles of Economics 3e</em>, §2.1, “Sunk Costs” (<a href="https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint">read the section</a>). Numerical examples and the interactive illustration are hypothetical, not market data. The movie comic was created with AI assistance to illustrate the same principle. Editable article and widget: <code>blog/posts/post1/</code>; illustrations: <code>images/blog1/</code> in the <a href="https://github.com/xia071212/myrepo">website repository</a>. Rendering instructions are in its README.</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
+<script>
+(() => {
+  const past = document.getElementById('past-cost');
+  const future = document.getElementById('future-benefit');
+  if (!past || !future) return;
+  const money = n => `${n < 0 ? '−' : ''}$${Math.abs(n)}`;
+  function update() {
+    const p = Number(past.value), f = Number(future.value), gain = f - 60;
+    document.getElementById('past-value').textContent = money(p);
+    document.getElementById('benefit-value').textContent = money(f);
+    document.getElementById('stop-total').textContent = money(60-p);
+    document.getElementById('continue-total').textContent = money(f-p);
+    document.getElementById('decision').textContent = gain > 0
+      ? `Holding is ahead by ${money(gain)} in expectation.`
+      : gain < 0 ? `Selling is ahead by ${money(-gain)}.`
+      : 'Both choices have the same expected value.';
+    document.getElementById('decision-reason').textContent = `Hold: ${money(f)} expected wealth. Sell: $60 in cash.`;
+  }
+  past.addEventListener('input', update);
+  future.addEventListener('input', update);
+  update();
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -262,7 +345,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/xia071212\.github\.io\/myrepo\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -596,7 +679,7 @@ window.Quarto = {
 <p><img src="../../../images/UniversityofPennsylvania_FullLogo_RGB.png" class="img-fluid" width="100"></p>
 </div>   
     <div class="nav-footer-center">
-<p>© 2026 Student Name</p>
+<p>© 2026 Yuting Xia</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

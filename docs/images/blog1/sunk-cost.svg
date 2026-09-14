@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="title desc">
+<title id="title">The decision starts here</title><desc id="desc">Past spending is unrecoverable. At today's decision, compare future benefits and future costs.</desc>
+<rect width="1080" height="470" rx="12" fill="#edf2f6"/>
+<g font-family="Arial,sans-serif">
+<text x="58" y="65" font-size="17" letter-spacing="3" fill="#6d7680">THE DECISION STARTS HERE</text>
+<path d="M58 224 H996" stroke="#b8c5d0" stroke-width="2"/>
+<path d="M998 224 l-12 -7 v14z" fill="#576b80"/>
+<path d="M400 109 V398" stroke="#576b80" stroke-width="2" stroke-dasharray="5 7"/>
+<circle cx="400" cy="224" r="9" fill="#576b80"/>
+<text x="58" y="177" font-size="31" fill="#727b85">Already spent.</text>
+<text x="58" y="283" font-size="22" fill="#727b85">Cannot be recovered</text>
+<text x="58" y="317" font-size="22" fill="#727b85">under either choice.</text>
+<text x="400" y="430" font-size="16" text-anchor="middle" fill="#576b80" letter-spacing="2">TODAY</text>
+<text x="469" y="164" font-family="Georgia,serif" font-size="45" fill="#576b80">What happens next?</text>
+<rect x="469" y="260" width="223" height="81" rx="7" fill="#576b80"/>
+<text x="580" y="309" text-anchor="middle" font-size="25" fill="#fff">Future benefits</text>
+<text x="726" y="311" text-anchor="middle" font-size="30" fill="#576b80">−</text>
+<rect x="758" y="260" width="260" height="81" rx="7" fill="#f0dfe5"/>
+<text x="888" y="309" text-anchor="middle" font-size="25" fill="#576b80">Future costs</text>
+<text x="469" y="382" font-size="20" fill="#687784">Compare only what your choice can change.</text>
+</g></svg>
