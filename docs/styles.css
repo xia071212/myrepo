@@ -25,3 +25,14 @@ main .columns>.column{float:none;flex-shrink:1}
 .sunk-cost-post .quarto-title>.title{order:1}
 .sunk-cost-post .quarto-title>.quarto-categories{order:2}
 .sunk-cost-post .quarto-title>.subtitle{order:3}
+
+/* Blog 2: keep wide data tables readable on small screens. */
+.fed-policy-post .table-scroll{overflow-x:auto;margin:1.2rem 0 1.8rem}
+.fed-policy-post .table-scroll table{min-width:620px;margin-bottom:0}
+.fed-policy-post figure img{width:100%;height:auto}
+.fed-policy-post .source-note code{font-size:.76rem}
+/* Place the brief news introduction directly below the categories. */
+.fed-policy-post .quarto-title{display:flex;flex-direction:column}
+.fed-policy-post .quarto-title>.title{order:1}
+.fed-policy-post .quarto-title>.quarto-categories{order:2}
+.fed-policy-post #title-block-header .description{font-style:italic}

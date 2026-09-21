@@ -1,5 +1,68 @@
 [
   {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "My resume is available on request."
+  },
+  {
+    "objectID": "resume.html#request-my-resume-by-email",
+    "href": "resume.html#request-my-resume-by-email",
+    "title": "Resume",
+    "section": "Request my resume by email",
+    "text": "Request my resume by email"
+  },
+  {
+    "objectID": "blog/posts/post2/index.html",
+    "href": "blog/posts/post2/index.html",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "",
+    "text": "Higher interest rates can slow spending and inflation, but they can also weaken hiring and make borrowing more expensive. The Fed must balance price stability with maximum employment, while the Treasury finances government debt at market rates. Since 2022, has the Fed brought inflation down without a sharp rise in unemployment—and has that progress come with pressure on longer-term borrowing costs? Tracking both the economy and the yield curve helps distinguish progress toward the dual mandate from the financial costs that may accompany it."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#from-public-pages-to-comparable-data",
+    "href": "blog/posts/post2/index.html#from-public-pages-to-comparable-data",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "From public pages to comparable data",
+    "text": "From public pages to comparable data\nI used rvest to extract 2-, 10-, and 30-year yields from the U.S. Treasury’s daily tables and 2020–2023 archive; policy changes and target ranges from the Federal Reserve’s policy history; and announcement dates from statements linked on its FOMC calendar. The Bureau of Labor Statistics supplies the CPI index and unemployment rate. Saved snapshots cover January 2022 through August 2026 for macro data and September 18, 2026 for yields.\npage &lt;- read_html(treasury_url)\nyield_table &lt;- page |&gt;\n  html_elements(\"table\") |&gt;\n  html_table(fill = TRUE)\nI converted the seasonally adjusted CPI index into its 12-month percentage change and measured each Treasury yield’s announcement-day move against the previous trading day’s close:\ninflation_yoy_pct &lt;- 100 * (cpi_index / lag(cpi_index, 12) - 1)\nyield_change_bp &lt;- 100 * (yield_today_pct - yield_previous_pct)\nThe data cover 1,178 Treasury trading days, 56 monthly macro observations, and 18 verified rate changes. All sources are open official pages; no login, paywall, or access restriction was bypassed."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#the-policy-path-and-the-dual-mandate",
+    "href": "blog/posts/post2/index.html#the-policy-path-and-the-dual-mandate",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "The policy path and the dual mandate",
+    "text": "The policy path and the dual mandate\nThe full schedule shows an unusually concentrated tightening phase, followed by a later easing cycle and the most recent increase.\n\n\n\n\nAnnouncement\nDecision\nChange (bp)\nNew target range (%)\n\n\n\n\nMar. 16, 2022\nHike\n+25\n0.25–0.50\n\n\nMay 4, 2022\nHike\n+50\n0.75–1.00\n\n\nJun. 15, 2022\nHike\n+75\n1.50–1.75\n\n\nJul. 27, 2022\nHike\n+75\n2.25–2.50\n\n\nSep. 21, 2022\nHike\n+75\n3.00–3.25\n\n\nNov. 2, 2022\nHike\n+75\n3.75–4.00\n\n\nDec. 14, 2022\nHike\n+50\n4.25–4.50\n\n\nFeb. 1, 2023\nHike\n+25\n4.50–4.75\n\n\nMar. 22, 2023\nHike\n+25\n4.75–5.00\n\n\nMay 3, 2023\nHike\n+25\n5.00–5.25\n\n\nJul. 26, 2023\nHike\n+25\n5.25–5.50\n\n\nSep. 18, 2024\nCut\n−50\n4.75–5.00\n\n\nNov. 7, 2024\nCut\n−25\n4.50–4.75\n\n\nDec. 18, 2024\nCut\n−25\n4.25–4.50\n\n\nSep. 17, 2025\nCut\n−25\n4.00–4.25\n\n\nOct. 29, 2025\nCut\n−25\n3.75–4.00\n\n\nDec. 10, 2025\nCut\n−25\n3.50–3.75\n\n\nSep. 16, 2026\nHike\n+25\n3.75–4.00\n\n\n\n\nFour milestones make the macroeconomic sequence easier to see. Monthly values refer to the observation month, and the policy rate is the target-range midpoint then in effect.\n\n\n\n\n\n\n\n\n\n\nMilestone\nMonth\nPolicy midpoint (%)\nCPI inflation (%)\nUnemployment (%)\n\n\n\n\nFirst hike\nMar. 2022\n0.38\n8.6\n3.7\n\n\nLast hike before easing\nJul. 2023\n5.38\n3.3\n3.5\n\n\nFirst cut\nSep. 2024\n4.88\n2.4\n4.1\n\n\nLatest macro data\nAug. 2026\n3.63\n3.4\n4.1\n\n\n\n\n\n\nPolicy tightened after inflation surged, while unemployment stayed low. October 2025 CPI and unemployment observations are missing because of a lapse in appropriations.\n\n\nThe first phase suggests that inflation could fall sharply without a large employment setback. During 2022–2023, the Fed raised its policy midpoint above 5% to restrain spending and price pressure. Inflation fell from its 9.0% peak to 3.3% by October 2023, while unemployment was 3.9%, close to its 4.0% starting level. This is consistent with progress toward both mandates, although policy was not the only influence. Keeping rates high then allowed restraint to continue: by August 2024 inflation had fallen to 2.6%, while unemployment had edged up to 4.2%. The improving inflation picture and softer labor market help explain the shift toward cuts in September. Through 2025, inflation generally fluctuated around 2.5–3%, but unemployment reached 4.4% by September, strengthening the case for supporting demand. Cuts do not directly suppress inflation; they can follow earlier disinflation while its effects continue. The balance shifted again in spring 2026: inflation rose to 4.2% in May, then eased to 3.4% in August, while unemployment declined to 4.1%. Renewed price pressure alongside a firmer labor market provides an economic rationale for the September hike. Its effects are not yet observable here. CPI illustrates the pattern; the Fed’s formal inflation goal uses PCE prices."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#three-maturities-one-policy-cycle",
+    "href": "blog/posts/post2/index.html#three-maturities-one-policy-cycle",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "Three maturities, one policy cycle",
+    "text": "Three maturities, one policy cycle\nThe yield summary compares January 3, 2022 with September 18, 2026; peaks are sample highs.\n\n\n\nMaturity\nStart (%)\nSample peak (%)\nPeak date\nLatest (%)\n\n\n\n\n2-year\n0.78\n5.19\nOct. 17, 2023\n4.76\n\n\n10-year\n1.63\n5.01\nSep. 16, 2026\n5.01\n\n\n30-year\n2.01\n5.37\nSep. 10, 2026\n5.34\n\n\n\n\n\n\nDaily 2-year, 10-year, and 30-year Treasury yields with Fed rate-change announcements.\n\n\nDuring 2022–2023, all three yields rose, but the 2-year became the highest and peaked at 5.19%. Investors appeared to expect high rates now, but lower rates later. That explains why lending for longer did not always earn a higher yield: expected future rate cuts could outweigh the extra compensation investors require for long-term uncertainty, called the term premium. By October 2024, the usual ordering had returned, with the 30-year above the 10-year and 2-year. During 2025, shorter yields declined more, widening the 30-minus-2-year gap from 0.61 percentage points in January to 1.07 in October. Expected easing can explain relief at the short end; continuing inflation uncertainty or greater government borrowing could help explain why long yields remained elevated. In 2026 the short end rose again, narrowing that gap, yet the latest 10- and 30-year yields were still 5.01% and 5.34%. Earlier policy cuts had not delivered lasting relief in long-term borrowing costs. Those high yields can make government refinancing and private loans linked to Treasury rates more expensive. The chart reveals this financing pressure, though it cannot identify which underlying driver caused it.\nThe announcement-day distribution makes that maturity contrast more direct.\n\n\n\n\n\n\n\n\n\n\nMaturity\nMeetings\nMean absolute move (bp)\nMedian (bp)\nMaximum (bp)\n\n\n\n\n2-year\n18\n8.7\n7.0\n25\n\n\n10-year\n18\n6.4\n5.0\n16\n\n\n30-year\n18\n3.9\n2.5\n10\n\n\n\n\n\n\nAbsolute announcement-day Treasury yield changes by maturity.\n\n\nAnnouncement-day yield movements were largest at two years and smallest at thirty years: median absolute changes were 7.0, 5.0, and 2.5 basis points. This fits the way policy reaches bond markets. A 2-year yield depends heavily on the next few years of policy, while a 30-year yield also reflects rates and risks far beyond the current cycle. A change in the near-term outlook therefore tends to matter more for the shorter maturity. When yields rise, new borrowing becomes more expensive and existing bond prices fall, extending policy’s reach beyond overnight lending. The practical distinction is that short yields respond more to near-term policy news, but long bonds can still suffer substantial price losses because a given yield increase affects their value more. These daily moves include anticipation and other news, so they show a pattern consistent with transmission rather than a precise causal effect."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#so-did-the-fed-pull-it-off",
+    "href": "blog/posts/post2/index.html#so-did-the-fed-pull-it-off",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "So, did the Fed pull it off?",
+    "text": "So, did the Fed pull it off?\nPolicy rates can help balance inflation and employment, but that balance needs continued adjustment. Inflation fell from roughly 9% to 2.4% by the first cut, while unemployment reached 4.1% without surging—a pattern consistent with progress toward the Fed’s dual mandate. Inflation’s later rebound to 3.4% shows that the task was unfinished. Further tightening could help if price pressure persists, but excessive tightening risks weakening hiring; easing too soon risks reviving inflation. These observations support a careful balancing act, not proof that policy alone caused the improvement.\nPolicy also reaches Treasury yields, with stronger announcement-day reactions at shorter maturities: median moves were 7.0, 5.0, and 2.5 basis points. Yet 10- and 30-year yields above 5% show that earlier cuts did not ensure cheap long-term financing. Further hikes could increase borrowing costs, but credible inflation control could also reassure lenders and bring long yields down. The policy challenge is to reduce inflation without unnecessarily weakening jobs or adding to financing pressure. Success should therefore be judged by inflation, employment, and borrowing conditions together—not by the rate decision alone.\n\nSources and reproducibility. U.S. Treasury daily par yields; Federal Reserve target-rate history, FOMC calendar, and policy statements; U.S. Bureau of Labor Statistics CPI and unemployment tables. See the full replication guide, the README, and the analysis repository. The analysis uses saved public-page snapshots and records source URLs and file fingerprints in the analysis repository’s results/ folder."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "One Policy, Two Mandates, Three Treasury Reactions\n\n\nOn September 16, the Fed raised rates by 25 basis points. With long Treasury yields above 5%, the stakes extend beyond inflation and jobs.\n\n\n\n\n\nSep 21, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nSunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\nYuting Xia’s personal website, with a biography, resume, and course blog."
+  },
+  {
     "objectID": "bio.html",
     "href": "bio.html",
     "title": "About Me",
@@ -26,13 +89,6 @@
     "title": "About Me",
     "section": "Contact",
     "text": "Contact\njinmao@sas.upenn.edu"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nBlog 2: Web Scraping for Actionable Insights\n\n\n\n\n\n\n\n\nJun 16, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/post1/Untitled.html",
@@ -77,45 +133,10 @@
     "text": "Why this matters outside investing\nThe same reasoning helps us reconsider a study method, a business project, or how we spend an evening. Hours already spent cannot be reclaimed, but the next hour can still be used well. Before continuing, identify what is unrecoverable, compare the remaining options, and include what each option requires you to give up.\nThe lesson is not to quit sooner. It is to choose the next step for what it can achieve. Past effort deserves reflection; future effort needs a reason.\n\nSource and illustration. Definition and movie example: OpenStax, Principles of Economics 3e, §2.1, “Sunk Costs” (read the section). Numerical examples and the interactive illustration are hypothetical, not market data. The movie comic was created with AI assistance to illustrate the same principle. Editable article and widget: blog/posts/post1/; illustrations: images/blog1/ in the website repository. Rendering instructions are in its README."
   },
   {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Resume",
-    "section": "",
-    "text": "My resume is available on request."
-  },
-  {
-    "objectID": "resume.html#request-my-resume-by-email",
-    "href": "resume.html#request-my-resume-by-email",
-    "title": "Resume",
-    "section": "Request my resume by email",
-    "text": "Request my resume by email"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yuting Xia",
     "section": "",
     "text": "Yuting Xia\nUniversity of Pennsylvania\nWelcome to my personal website. I am pursuing an M.S. in Applied Economics and Data Science, with expected graduation in December 2027.\n\nQuick Links"
-  },
-  {
-    "objectID": "blog/posts/post2/index.html",
-    "href": "blog/posts/post2/index.html",
-    "title": "Blog 2: Web Scraping for Actionable Insights",
-    "section": "",
-    "text": "This article is not yet written. This space is reserved for the next course blog post."
-  },
-  {
-    "objectID": "blog/posts/post2/index.html#blog-2",
-    "href": "blog/posts/post2/index.html#blog-2",
-    "title": "Blog 2: Web Scraping for Actionable Insights",
-    "section": "",
-    "text": "This article is not yet written. This space is reserved for the next course blog post."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\nYuting Xia’s personal website, with a biography, resume, and course blog."
   }
 ]
