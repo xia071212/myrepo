@@ -5,8 +5,8 @@ author: "Yuting Xia"
 date: 2026-09-14
 date-format: "MMMM D, YYYY"
 categories: [Economics, Decision-making]
-image: /images/blog1/sunk-cost.svg
-image-alt: "Past spending is behind us; today's decision compares future benefits and future costs."
+image: /images/blog1/sunk-cost-movie-comic.png
+image-alt: "A rabbit considers whether to stay at a movie after buying a nonrefundable ticket."
 toc: false
 body-classes: sunk-cost-post
 include-after-body: _includes/interactive.html
