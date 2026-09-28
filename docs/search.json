@@ -53,7 +53,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "One Policy, Two Mandates, Three Treasury Reactions\n\n\nOn September 16, the Fed raised rates by 25 basis points. With long Treasury yields above 5%, the stakes extend beyond inflation and jobs.\n\n\n\n\n\nSep 21, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nSunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\nNo matching items"
+    "text": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?\n\n\nA look at the typical worker’s earnings across occupations, ages, and fifty income years.\n\n\n\n\n\nSep 28, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nOne Policy, Two Mandates, Three Treasury Reactions\n\n\nOn September 16, the Fed raised rates by 25 basis points. With long Treasury yields above 5%, the stakes extend beyond inflation and jobs.\n\n\n\n\n\nSep 21, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nSunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -138,5 +138,47 @@
     "title": "Yuting Xia",
     "section": "",
     "text": "Yuting Xia\nUniversity of Pennsylvania\nWelcome to my personal website. I am pursuing an M.S. in Applied Economics and Data Science, with expected graduation in December 2027.\n\nQuick Links"
+  },
+  {
+    "objectID": "blog/posts/post3/index.html",
+    "href": "blog/posts/post3/index.html",
+    "title": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?",
+    "section": "",
+    "text": "The Forbes billionaires list highlights extraordinary wealth associated with technology companies. Finance also has a reputation for high pay. But billionaire wealth comes largely from ownership, while most career decisions concern wages. Do typical tech and finance workers earn more than people in other occupations? Is the advantage visible early in adulthood, and has it changed over time?"
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#from-the-survey-to-the-comparison",
+    "href": "blog/posts/post3/index.html#from-the-survey-to-the-comparison",
+    "title": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?",
+    "section": "From the survey to the comparison",
+    "text": "From the survey to the comparison\nI use IPUMS CPS, drawing on the Annual Social and Economic Supplement (ASEC) from survey years 1976–2025. Each survey asks about income in the preceding calendar year, so the earnings series runs from 1975 to 2024. The sample contains 2,191,970 person-year records after restricting to wage and salary workers ages 25–64 who usually worked at least 35 hours a week and at least 50 weeks in the previous year. A person appearing in multiple surveys contributes multiple records.\nEarnings are annual pretax wages and salaries (INCWAGE). Occupations are based on the longest-held job in that income year (OCC10LY), harmonized to a 2010 classification. I group computing, software, information systems, and computer hardware jobs as Tech; financial management, accounting, analysis, advice, insurance, and related sales as Finance; healthcare management and clinical or technical jobs as Healthcare; and other identified civilian occupations as Other. Thus these are occupations, not employer industries. The Tech group captures many AI-related jobs but cannot identify every AI worker.\nEach median uses the CPS ASEC person weight (ASECWT) to describe the represented population, rather than treating every survey respondent as equally representative. To compare dollar levels across years, I use IPUMS’s CPI factor to express them in 2024 dollars. The three-year age chart pools observations after this adjustment and divides each person’s weight by three."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#which-occupations-pay-more-now",
+    "href": "blog/posts/post3/index.html#which-occupations-pay-more-now",
+    "title": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?",
+    "section": "Which occupations pay more now?",
+    "text": "Which occupations pay more now?\nFor income earned in 2024, Tech’s weighted median was $116,000, followed by $98,000 in Finance, $81,120 in Healthcare, and $60,000 in Other. The 2024 estimates use 2,149 Tech and 1,722 Finance sample records. The boxplots put 2022–2024 incomes on a common 2024-dollar scale.\n\n\n\nWeighted earnings distributions for four occupation groups in 2022–2024. Boxes show the 25th to 75th percentiles, center lines the medians, and whiskers the 10th to 90th percentiles.\n\n\nAcross all three years, the medians rank Tech, Finance, Healthcare, then Other. Tech stays near $116,000, while Finance rises each year from $85,725 to $98,000. Healthcare edges down; Other is roughly stable. Tech and Finance also have wider earnings distributions in dollar terms than Healthcare and Other, as shown by their larger interquartile ranges: in 2024, Tech’s middle half runs from $75,000 to $160,000, versus $41,600 to $95,000 for Other. Finance’s 90th percentile slightly exceeds Tech’s, despite its lower median; the distributions overlap."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#is-the-gap-present-early",
+    "href": "blog/posts/post3/index.html#is-the-gap-present-early",
+    "title": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?",
+    "section": "Is the gap present early?",
+    "text": "Is the gap present early?\nYes. Among respondents ages 25–29 in the pooled 2022–2024 data, Tech’s median was $96,441, Finance’s $77,260, and Other’s $50,363 in 2024 dollars. Tech leads at every plotted age. The Tech–Finance gap is $19,181 at 25–29, $27,303 at 40–44, and $28,430 at 60–64. After ages 45–49, the gap widens across each successive age group, from $17,872 at 45–49 to $28,430 at 60–64. Different job mixes and cohorts can help explain the uneven pattern.\n\n\n\nMedian earnings by five-year age group, pooled over income years 2022–2024.\n\n\nThe lines compare different people at different ages. They cannot show how one person’s wages will grow. Education, occupation mix, cohort differences, and who remains in full-time work can also shape the curves."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#has-the-advantage-changed-since-the-1970s",
+    "href": "blog/posts/post3/index.html#has-the-advantage-changed-since-the-1970s",
+    "title": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?",
+    "section": "Has the advantage changed since the 1970s?",
+    "text": "Has the advantage changed since the 1970s?\nI measure each group’s annual premium as its weighted median divided by the Other median, minus one. This same-year ratio avoids comparing nominal dollars across decades. In 1975, Tech’s premium was 48.7% and Finance’s 27.3%. By 2024 they were 93.3% and 63.3%. The gap between their premiums grew from 21.4 to 30.0 percentage points. It fluctuated along the way; it did not widen every year.\n\n\n\nTech and Finance median earnings premiums relative to Other, income years 1975–2024.\n\n\nThe earlier Tech samples are smaller, and changes in occupational coding, income disclosure rules, and CPS weights limit exact comparisons over fifty years. The 2013 income observation uses the original 5/8 questionnaire in the 2014 ASEC redesign. These descriptive differences do not isolate the effect of choosing a career, let alone the effect of AI."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#what-should-a-career-chooser-take-away",
+    "href": "blog/posts/post3/index.html#what-should-a-career-chooser-take-away",
+    "title": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?",
+    "section": "What should a career chooser take away?",
+    "text": "What should a career chooser take away?\nTech and Finance workers in this full-time, full-year sample earn more at the median than the broad Other group, and the gap is already visible at ages 25–29. Tech leads Finance in the recent data and throughout the age profile. Their relative advantages are larger than in the 1970s, but the pattern is uneven. These group medians do not predict what any one person will earn.\n\nSource and replication. Flood et al., IPUMS CPS: Version 13.0, ASEC extract 1. See the full replication guide, README, and analysis repository for definitions, sample counts, code, and results. The authenticated CPS microdata are kept outside the public repository."
   }
 ]

@@ -36,3 +36,5 @@ main .columns>.column{float:none;flex-shrink:1}
 .fed-policy-post .quarto-title>.title{order:1}
 .fed-policy-post .quarto-title>.quarto-categories{order:2}
 .fed-policy-post #title-block-header .description{font-style:italic}
+.blog3-post #title-block-header .description{font-style:italic}
+.blog3-post figure img{width:100%;height:auto}
