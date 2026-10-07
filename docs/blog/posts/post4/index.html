@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Yuting Xia">
+<meta name="dcterms.date" content="2026-10-06">
+<meta name="description" content="Do higher government bond yields make a currency more attractive—or is the yield advantage over other countries what matters?">
+
+<title>High Yields, Hot Currencies? – Yuting Xia</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed blog4-post quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yuting Xia</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../bio.html"> 
+<span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../resume.html"> 
+<span class="menu-text">Resume</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#do-yields-and-currencies-move-together" id="toc-do-yields-and-currencies-move-together" class="nav-link active" data-scroll-target="#do-yields-and-currencies-move-together">Do yields and currencies move together?</a></li>
+  <li><a href="#do-rising-domestic-yields-accompany-appreciation" id="toc-do-rising-domestic-yields-accompany-appreciation" class="nav-link" data-scroll-target="#do-rising-domestic-yields-accompany-appreciation">Do rising domestic yields accompany appreciation?</a></li>
+  <li><a href="#does-the-yield-advantage-over-the-us-matter-more" id="toc-does-the-yield-advantage-over-the-us-matter-more" class="nav-link" data-scroll-target="#does-the-yield-advantage-over-the-us-matter-more">Does the yield advantage over the US matter more?</a></li>
+  <li><a href="#what-is-the-answer-for-investors" id="toc-what-is-the-answer-for-investors" class="nav-link" data-scroll-target="#what-is-the-answer-for-investors">What is the answer for investors?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">High Yields, Hot Currencies?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Fixed Income</div>
+    <div class="quarto-category">Exchange Rates</div>
+    <div class="quarto-category">Yield Spreads</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Do higher government bond yields make a currency more attractive—or is the yield advantage over other countries what matters?
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Yuting Xia </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 6, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In a volatile world, investors may seek the predictable income of government bonds. Higher yields can make those bonds look more attractive. Overseas investors buying unhedged foreign bonds also need the local currency, potentially increasing demand for it. This raises a natural question: <strong>can more attractive government bond yields help strengthen a currency, or is the yield advantage over other countries what really matters?</strong> Exchange-rate losses can offset bond income, making this distinction important for international investors.</p>
+<section id="do-yields-and-currencies-move-together" class="level2">
+<h2 class="anchored" data-anchor-id="do-yields-and-currencies-move-together">Do yields and currencies move together?</h2>
+<p>First, do the country-level paths reveal a clear relationship? I combine <a href="https://data-explorer.oecd.org/">OECD Financial Market</a> yields with <a href="https://data.bis.org/topics/EER">BIS broad nominal effective exchange rates</a> (NEER) and <a href="https://data.bis.org/topics/XRU">BIS bilateral exchange rates</a> for the United States, Japan, United Kingdom, Canada, and Switzerland, monthly from January 2017 through April 2026.</p>
+<p>OECD’s <a href="https://www.oecd.org/en/data/indicators/long-term-interest-rates.html">long-term rate indicator</a> represents benchmark ten-year government yields, in percent per year. NEER measures a currency against a trade-weighted basket: a rising index means appreciation, with 2020 averaging 100. BIS bilateral rates measure local currency units per US dollar; a falling number means the local currency strengthens against the dollar.</p>
+<div id="fig-overview" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Five separate country panels, each pairing its government bond yield and broad nominal effective exchange rate on dual axes, January 2017 to April 2026.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../../images/blog4/figure1.png" class="img-fluid figure-img" alt="Five separate country panels, each pairing its government bond yield and broad nominal effective exchange rate on dual axes, January 2017 to April 2026.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Each country’s yield (blue, left axis) and NEER (gold, right axis). All panels share the same axis ranges.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-overview" class="quarto-xref">Figure&nbsp;1</a> reveals no obvious common pattern. US yields and dollar strength sometimes move together, suggesting the proposed relationship. Japan often shows the opposite: yields rise while its currency weakens. Canada, the United Kingdom, and Switzerland show less consistent alignment. These paths cannot establish a general correlation, and dual-axis slopes depend on scaling. We therefore need to compare changes systematically.</p>
+</section>
+<section id="do-rising-domestic-yields-accompany-appreciation" class="level2">
+<h2 class="anchored" data-anchor-id="do-rising-domestic-yields-accompany-appreciation">Do rising domestic yields accompany appreciation?</h2>
+<p>Next, does a rise in a country’s own yield coincide with currency appreciation over the same year? I calculate the twelve-month yield change, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>t</mi></msub><mo>−</mo><msub><mi>y</mi><mrow><mi>t</mi><mo>−</mo><mn>12</mn></mrow></msub></mrow><annotation encoding="application/x-tex">y_t-y_{t-12}</annotation></semantics></math>, in percentage points; a positive value means the bond now offers a higher yield. NEER appreciation, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo stretchy="false" form="prefix">(</mo><msub><mi>N</mi><mi>t</mi></msub><mi>/</mi><msub><mi>N</mi><mrow><mi>t</mi><mo>−</mo><mn>12</mn></mrow></msub><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">100(N_t/N_{t-12}-1)</annotation></semantics></math>, measures the percentage strengthening or weakening against the currency basket over that year. Positive values mean appreciation. The transformations leave 100 monthly observations per country, January 2018–April 2026.</p>
+<div id="fig-absolute" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Five scatterplot panels of twelve-month domestic yield changes against NEER appreciation, with country-specific correlations.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-absolute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../../images/blog4/figure2.png" class="img-fluid figure-img" alt="Five scatterplot panels of twelve-month domestic yield changes against NEER appreciation, with country-specific correlations.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-absolute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Twelve-month domestic yield changes versus NEER appreciation. Each dot is a month; lines summarize the relationship.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-absolute" class="quarto-xref">Figure&nbsp;2</a> shows weak positive correlations in Canada (0.24), the United States (0.18), and Switzerland (0.12), but negative ones in Japan (-0.38) and Britain (-0.12). Rising domestic yields alone do not consistently accompany stronger currencies. Could investors instead respond to how yields compare with alternatives abroad? I next use US Treasuries as the benchmark.</p>
+</section>
+<section id="does-the-yield-advantage-over-the-us-matter-more" class="level2">
+<h2 class="anchored" data-anchor-id="does-the-yield-advantage-over-the-us-matter-more">Does the yield advantage over the US matter more?</h2>
+<p>Does an improving yield advantage over US Treasuries align more closely with appreciation against the dollar? I calculate the domestic-minus-US yield spread and its twelve-month change; a positive change means the domestic yield becomes more attractive relative to the US yield. Dollar appreciation is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mrow><mi>t</mi><mo>−</mo><mn>12</mn></mrow></msub><mi>/</mi><msub><mi>E</mi><mi>t</mi></msub><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">100(E_{t-12}/E_t-1)</annotation></semantics></math>, using monthly-average rates. Because <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> is local currency per dollar, the ratio is reversed so that a stronger local currency produces a positive return.</p>
+<div id="fig-relative" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four scatterplot panels showing positive relative-yield correlations in Japan, Canada and Switzerland, and a weak negative relationship in the United Kingdom.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-relative-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../../images/blog4/figure3.png" class="img-fluid figure-img" alt="Four scatterplot panels showing positive relative-yield correlations in Japan, Canada and Switzerland, and a weak negative relationship in the United Kingdom.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-relative-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Changes in the yield advantage over US Treasuries versus local currency appreciation against the dollar.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-relative" class="quarto-xref">Figure&nbsp;3</a> shows upward-sloping relationships for Japan (0.69), Canada (0.46), and Switzerland (0.26). The pattern is clearest in Japan, moderate in Canada, and weaker in Switzerland. Britain remains an exception, with a slight negative relationship (-0.13).</p>
+<p>To compare absolute and relative yields more clearly, the table places their correlations with currency strength side by side, using the same measure of appreciation against the dollar and the same 100 months. Yield-spread changes show a stronger positive correlation in Japan and Canada, while Switzerland shifts from a negative to a positive relationship. Britain remains slightly negative. Overall, yield-spread changes are more positively associated with currency appreciation than domestic yield changes, but this positive relationship is not universal.</p>
+<div id="tbl-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Correlation with appreciation against USD: same outcome and same 100 months.
+</figcaption>
+<div aria-describedby="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th style="text-align: right;">Domestic yield change</th>
+<th style="text-align: right;">Yield-spread change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Canada</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0.46</td>
+</tr>
+<tr class="even">
+<td>Japan</td>
+<td style="text-align: right;">-0.19</td>
+<td style="text-align: right;">0.69</td>
+</tr>
+<tr class="odd">
+<td>Switzerland</td>
+<td style="text-align: right;">-0.27</td>
+<td style="text-align: right;">0.26</td>
+</tr>
+<tr class="even">
+<td>United Kingdom</td>
+<td style="text-align: right;">-0.31</td>
+<td style="text-align: right;">-0.13</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="what-is-the-answer-for-investors" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-answer-for-investors">What is the answer for investors?</h2>
+<p><strong>More attractive domestic yields do not consistently accompany stronger currencies; the yield advantage abroad helps explain some country patterns, but supplies no universal rule.</strong> Domestic yield changes align weakly with appreciation in the US and Canada, while Japan and Britain show negative relationships. Relative yields reveal positive relationships in Japan, Canada, and Switzerland, yet Britain remains negative. Each country has its own pattern. Investors should therefore consider not only higher yields but also potential losses from exchange-rate movements and the costs of currency conversion or hedging.</p>
+<p>These contemporaneous associations do not establish that yields caused capital inflows. Inflation expectations, policy surprises, risk premia, and hedging also matter.</p>
+<div class="source-note">
+<p><strong>Sources and replication.</strong> Data come from OECD Financial Market and BIS exchange-rate datasets. The R scripts for downloading, cleaning, and plotting the data, together with the archived data and replication instructions, are available in the <a href="https://github.com/xia071212/blog4repo">GitHub repository</a>. See the <a href="https://github.com/xia071212/blog4repo#readme">README</a> to reproduce the figures and results.</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/xia071212\.github\.io\/myrepo\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><img src="../../../images/UniversityofPennsylvania_FullLogo_RGB.png" class="img-fluid" width="100"></p>
+</div>   
+    <div class="nav-footer-center">
+<p>© 2026 Yuting Xia</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

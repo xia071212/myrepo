@@ -53,7 +53,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?\n\n\nA look at the typical worker’s earnings across occupations, ages, and fifty income years.\n\n\n\n\n\nSep 28, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nOne Policy, Two Mandates, Three Treasury Reactions\n\n\nOn September 16, the Fed raised rates by 25 basis points. With long Treasury yields above 5%, the stakes extend beyond inflation and jobs.\n\n\n\n\n\nSep 21, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nSunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\nNo matching items"
+    "text": "High Yields, Hot Currencies?\n\n\nDo higher government bond yields make a currency more attractive—or is the yield advantage over other countries what matters?\n\n\n\n\n\nOct 6, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nTech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?\n\n\nA look at the typical worker’s earnings across occupations, ages, and fifty income years.\n\n\n\n\n\nSep 28, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nOne Policy, Two Mandates, Three Treasury Reactions\n\n\nOn September 16, the Fed raised rates by 25 basis points. With long Treasury yields above 5%, the stakes extend beyond inflation and jobs.\n\n\n\n\n\nSep 21, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nSunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -180,5 +180,40 @@
     "title": "Tech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?",
     "section": "What should a career chooser take away?",
     "text": "What should a career chooser take away?\nTech and Finance workers in this full-time, full-year sample earn more at the median than the broad Other group, and the gap is already visible at ages 25–29. Tech leads Finance in the recent data and throughout the age profile. Their relative advantages are larger than in the 1970s, but the pattern is uneven. These group medians do not predict what any one person will earn.\n\nSource and replication. Flood et al., IPUMS CPS: Version 13.0, ASEC extract 1. See the full replication guide, README, and analysis repository for definitions, sample counts, code, and results. The authenticated CPS microdata are kept outside the public repository."
+  },
+  {
+    "objectID": "blog/posts/post4/index.html",
+    "href": "blog/posts/post4/index.html",
+    "title": "High Yields, Hot Currencies?",
+    "section": "",
+    "text": "In a volatile world, investors may seek the predictable income of government bonds. Higher yields can make those bonds look more attractive. Overseas investors buying unhedged foreign bonds also need the local currency, potentially increasing demand for it. This raises a natural question: can more attractive government bond yields help strengthen a currency, or is the yield advantage over other countries what really matters? Exchange-rate losses can offset bond income, making this distinction important for international investors."
+  },
+  {
+    "objectID": "blog/posts/post4/index.html#do-yields-and-currencies-move-together",
+    "href": "blog/posts/post4/index.html#do-yields-and-currencies-move-together",
+    "title": "High Yields, Hot Currencies?",
+    "section": "Do yields and currencies move together?",
+    "text": "Do yields and currencies move together?\nFirst, do the country-level paths reveal a clear relationship? I combine OECD Financial Market yields with BIS broad nominal effective exchange rates (NEER) and BIS bilateral exchange rates for the United States, Japan, United Kingdom, Canada, and Switzerland, monthly from January 2017 through April 2026.\nOECD’s long-term rate indicator represents benchmark ten-year government yields, in percent per year. NEER measures a currency against a trade-weighted basket: a rising index means appreciation, with 2020 averaging 100. BIS bilateral rates measure local currency units per US dollar; a falling number means the local currency strengthens against the dollar.\n\n\n\n\n\n\nFigure 1: Each country’s yield (blue, left axis) and NEER (gold, right axis). All panels share the same axis ranges.\n\n\n\nFigure 1 reveals no obvious common pattern. US yields and dollar strength sometimes move together, suggesting the proposed relationship. Japan often shows the opposite: yields rise while its currency weakens. Canada, the United Kingdom, and Switzerland show less consistent alignment. These paths cannot establish a general correlation, and dual-axis slopes depend on scaling. We therefore need to compare changes systematically."
+  },
+  {
+    "objectID": "blog/posts/post4/index.html#do-rising-domestic-yields-accompany-appreciation",
+    "href": "blog/posts/post4/index.html#do-rising-domestic-yields-accompany-appreciation",
+    "title": "High Yields, Hot Currencies?",
+    "section": "Do rising domestic yields accompany appreciation?",
+    "text": "Do rising domestic yields accompany appreciation?\nNext, does a rise in a country’s own yield coincide with currency appreciation over the same year? I calculate the twelve-month yield change, yt−yt−12y_t-y_{t-12}, in percentage points; a positive value means the bond now offers a higher yield. NEER appreciation, 100(Nt/Nt−12−1)100(N_t/N_{t-12}-1), measures the percentage strengthening or weakening against the currency basket over that year. Positive values mean appreciation. The transformations leave 100 monthly observations per country, January 2018–April 2026.\n\n\n\n\n\n\nFigure 2: Twelve-month domestic yield changes versus NEER appreciation. Each dot is a month; lines summarize the relationship.\n\n\n\nFigure 2 shows weak positive correlations in Canada (0.24), the United States (0.18), and Switzerland (0.12), but negative ones in Japan (-0.38) and Britain (-0.12). Rising domestic yields alone do not consistently accompany stronger currencies. Could investors instead respond to how yields compare with alternatives abroad? I next use US Treasuries as the benchmark."
+  },
+  {
+    "objectID": "blog/posts/post4/index.html#does-the-yield-advantage-over-the-us-matter-more",
+    "href": "blog/posts/post4/index.html#does-the-yield-advantage-over-the-us-matter-more",
+    "title": "High Yields, Hot Currencies?",
+    "section": "Does the yield advantage over the US matter more?",
+    "text": "Does the yield advantage over the US matter more?\nDoes an improving yield advantage over US Treasuries align more closely with appreciation against the dollar? I calculate the domestic-minus-US yield spread and its twelve-month change; a positive change means the domestic yield becomes more attractive relative to the US yield. Dollar appreciation is 100(Et−12/Et−1)100(E_{t-12}/E_t-1), using monthly-average rates. Because EE is local currency per dollar, the ratio is reversed so that a stronger local currency produces a positive return.\n\n\n\n\n\n\nFigure 3: Changes in the yield advantage over US Treasuries versus local currency appreciation against the dollar.\n\n\n\nFigure 3 shows upward-sloping relationships for Japan (0.69), Canada (0.46), and Switzerland (0.26). The pattern is clearest in Japan, moderate in Canada, and weaker in Switzerland. Britain remains an exception, with a slight negative relationship (-0.13).\nTo compare absolute and relative yields more clearly, the table places their correlations with currency strength side by side, using the same measure of appreciation against the dollar and the same 100 months. Yield-spread changes show a stronger positive correlation in Japan and Canada, while Switzerland shifts from a negative to a positive relationship. Britain remains slightly negative. Overall, yield-spread changes are more positively associated with currency appreciation than domestic yield changes, but this positive relationship is not universal.\n\n\n\nTable 1: Correlation with appreciation against USD: same outcome and same 100 months.\n\n\n\n\n\nCountry\nDomestic yield change\nYield-spread change\n\n\n\n\nCanada\n0.07\n0.46\n\n\nJapan\n-0.19\n0.69\n\n\nSwitzerland\n-0.27\n0.26\n\n\nUnited Kingdom\n-0.31\n-0.13"
+  },
+  {
+    "objectID": "blog/posts/post4/index.html#what-is-the-answer-for-investors",
+    "href": "blog/posts/post4/index.html#what-is-the-answer-for-investors",
+    "title": "High Yields, Hot Currencies?",
+    "section": "What is the answer for investors?",
+    "text": "What is the answer for investors?\nMore attractive domestic yields do not consistently accompany stronger currencies; the yield advantage abroad helps explain some country patterns, but supplies no universal rule. Domestic yield changes align weakly with appreciation in the US and Canada, while Japan and Britain show negative relationships. Relative yields reveal positive relationships in Japan, Canada, and Switzerland, yet Britain remains negative. Each country has its own pattern. Investors should therefore consider not only higher yields but also potential losses from exchange-rate movements and the costs of currency conversion or hedging.\nThese contemporaneous associations do not establish that yields caused capital inflows. Inflation expectations, policy surprises, risk premia, and hedging also matter.\n\nSources and replication. Data come from OECD Financial Market and BIS exchange-rate datasets. The R scripts for downloading, cleaning, and plotting the data, together with the archived data and replication instructions, are available in the GitHub repository. See the README to reproduce the figures and results."
   }
 ]

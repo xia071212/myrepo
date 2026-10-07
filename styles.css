@@ -38,3 +38,7 @@ main .columns>.column{float:none;flex-shrink:1}
 .fed-policy-post #title-block-header .description{font-style:italic}
 .blog3-post #title-block-header .description{font-style:italic}
 .blog3-post figure img{width:100%;height:auto}
+
+/* Blog 4: use the same article presentation as Blog 3. */
+.blog4-post #title-block-header .description{font-style:italic}
+.blog4-post figure img{width:100%;height:auto}
