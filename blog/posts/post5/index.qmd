@@ -1,19 +1,19 @@
 ---
-title: "Higher Taxes, Richer Governments?"
+title: "Low Taxes, Deep Pockets? Who Funds Your State?"
 description: "Do states that collect more tax really have richer governments, and who actually pays the bill?"
 author: "Yuting Xia"
 date: 2026-10-19
 date-format: "MMMM D, YYYY"
 categories: [State Taxes, Public Finance, Tax Exporting]
 body-classes: blog4-post
-image: /images/blog5/tax-and-government.png
-image-alt: "Hand-drawn pastel illustration: two smiling tax coins on the left, a smiling state capitol holding a money bag on the right, a small oil drop and federal-aid envelope walking toward it, and a question mark in between."
+image: /images/blog5/low-taxes-deep-pockets.png
+image-alt: "A small low-tax bill beside a full government coin purse containing a town hall, with a tourist and oil revenues contributing coins."
 toc: true
 ---
 
 Taxes vary widely across U.S. states, and many people weigh them when choosing where to live. Higher taxes raise the cost of living, but a better-funded government can also mean better roads, schools and hospitals. So **do states that collect more tax really have richer governments?** And beyond taxes, what else decides how much money a state government has?
 
-![](/images/blog5/tax-and-government.png){fig-alt="Hand-drawn pastel illustration: two smiling tax coins on the left, a smiling state capitol holding a money bag on the right, a small oil drop and federal-aid envelope walking toward it, and a question mark in between."}
+![](/images/blog5/low-taxes-deep-pockets.png){fig-alt="A small low-tax bill beside a full government coin purse containing a town hall, with a tourist and oil revenues contributing coins."}
 
 ## How far apart are state tax bills?
 
