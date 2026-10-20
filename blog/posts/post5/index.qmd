@@ -21,9 +21,9 @@ Before asking whether governments differ, we need to know how much their taxes d
 
 ![](/images/blog5/fig1a_taxes_map.png){fig-alt="Map of state and local taxes per person; New York, DC, California and the Northeast are darkest, the Southeast lightest."}
 
-![](/images/blog5/fig1b_taxes_bars.png){fig-alt="Bar chart ranking all 50 states and DC by taxes per person, from DC at about $15,000 to Tennessee at about $4,800."}
-
 The range is wide. DC collects $14,967 per resident and New York $12,549, while Tennessee, Alabama and Mississippi collect under $5,000. The highest is 3.1 times the lowest. Even ignoring the extremes, a state at the 90th percentile collects 1.8 times as much as one at the 10th. The map shows a clear geography: high taxes cluster in the Northeast, along the West Coast and in Hawaii, and low taxes across the South and much of the Mountain West. A likely reason is income. Residents of the Northeast and West Coast earn more and own pricier homes, so similar tax rates raise more dollars, and many of these states also choose broader public services.
+
+![](/images/blog5/fig1b_taxes_bars.png){fig-alt="Bar chart ranking all 50 states and DC by taxes per person, from DC at about $15,000 to Tennessee at about $4,800."}
 
 ## Does counting all revenue close the gap?
 
@@ -31,9 +31,9 @@ Taxes are not a government's only money. If low-tax states make up the differenc
 
 ![](/images/blog5/fig2a_revenue_map.png){fig-alt="Map of general revenue per person; New York, DC, New Mexico and Alaska are darkest, Tennessee lightest."}
 
-![](/images/blog5/fig2b_revenue_bars.png){fig-alt="Stacked bars of taxes, fees and other own revenue, and federal transfers per person for every state, in the same order as the tax ranking."}
-
 General revenue ranges from $9,819 per person in Tennessee to $30,191 in DC, followed by New York ($21,658), New Mexico ($21,442) and Alaska ($20,756). **The gap barely narrows:** the highest is still 3.1 times the lowest, and the 90th-to-10th percentile ratio falls only from 1.8 to 1.7. On the map, the Southeast stays lightest and the Northeast stays dark.
+
+![](/images/blog5/fig2b_revenue_bars.png){fig-alt="Stacked bars of taxes, fees and other own revenue, and federal transfers per person for every state, in the same order as the tax ranking."}
 
 Federal money does not fill the gap. The ten highest-tax states receive about $4,990 per person from Washington, compared with $3,470 for the ten lowest. Medicaid, the largest federal grant, pays a share of whatever each state spends on it, so states that raise more tax and spend more on health care also draw more federal dollars. In dollars, the gap between those two groups grows from about $5,100 per person in taxes to about $7,400 in total revenue. For most of the South, low taxes do mean smaller government budgets.
 
@@ -44,6 +44,8 @@ The map also reveals one clear exception. Alaska, Wyoming and New Mexico, which 
 Some taxes fall on people who live elsewhere, such as a hotel tax in Las Vegas or a tax on oil sold across the country. The [Tax Foundation](https://taxfoundation.org/data/all/state/tax-burden-by-state-2022/) estimates how much tax each state's residents pay to their own state. Comparing that with what the state actually collected per resident in 2022 gives the share of tax revenue paid by nonresidents: 0% means residents pay everything, and 50% means outsiders pay half.
 
 ![](/images/blog5/fig3_nonresident_map.png){fig-alt="Map of the share of 2022 tax revenue paid by nonresidents; Alaska, Wyoming, North Dakota and New Mexico are dark red, Virginia, Utah and Connecticut dark blue."}
+
+Connecticut's −2% reflects differences between Tax Foundation's calendar-year estimates and Census fiscal-year collections, not an actual negative share paid by nonresidents.
 
 In the median state, about a quarter of tax revenue comes from nonresidents. The energy states stand far above that: about 78% in Alaska, 58% in Wyoming and North Dakota, and 51% in New Mexico. DC (40%) and Nevada (37%) follow. At the other end, high-tax states such as California, New York and Illinois collect less than 20% from outsiders. The map's red band, running from the northern Plains through the Mountain West, matches where oil, gas and coal are produced. Taxes on extracting those resources are built into the price of energy that people nationwide buy, while DC and Nevada draw on commuters, tourists and casinos.
 
