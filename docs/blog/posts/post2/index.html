@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yuting Xia">
 <meta name="dcterms.date" content="2026-09-21">
-<meta name="description" content="On September 16, the Fed raised rates by 25 basis points. With long Treasury yields above 5%, the stakes extend beyond inflation and jobs.">
+<meta name="description" content="Can Fed interest-rate policy balance inflation and employment, and do Treasury yields respond differently across maturities?">
 
 <title>One Policy, Two Mandates, Three Treasury Reactions – Yuting Xia</title>
 <style>
@@ -25,41 +25,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -184,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    On September 16, the Fed raised rates by 25 basis points. With long Treasury yields above 5%, the stakes extend beyond inflation and jobs.
+    Can Fed interest-rate policy balance inflation and employment, and do Treasury yields respond differently across maturities?
   </div>
 </div>
 
@@ -213,18 +178,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Higher interest rates can slow spending and inflation, but they can also weaken hiring and make borrowing more expensive. The Fed must balance price stability with maximum employment, while the Treasury finances government debt at market rates. <strong>Since 2022, has the Fed brought inflation down without a sharp rise in unemployment—and has that progress come with pressure on longer-term borrowing costs?</strong> Tracking both the economy and the yield curve helps distinguish progress toward the dual mandate from the financial costs that may accompany it.</p>
+<p>Higher interest rates can restrain inflation but weaken hiring; comparing the Fed’s policy cycle with labor-market conditions and Treasury yields reveals both this balancing act and its transmission across maturities.</p>
+<p><img src="../../../images/blog2/fed-balance-and-bond-maturities.png" class="img-fluid" alt="Pastel hand-drawn illustration of a central bank balancing a grocery basket and a briefcase, with 2-, 10-, and 30-year Treasury bond characters."></p>
 <section id="from-public-pages-to-comparable-data" class="level2">
 <h2 class="anchored" data-anchor-id="from-public-pages-to-comparable-data">From public pages to comparable data</h2>
-<p>I used <code>rvest</code> to extract 2-, 10-, and 30-year yields from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026">U.S. Treasury’s daily tables</a> and <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rate-archives/par-yield-curve-render-2020-2023.xml">2020–2023 archive</a>; policy changes and target ranges from the <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm">Federal Reserve’s policy history</a>; and announcement dates from statements linked on its <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">FOMC calendar</a>. The Bureau of Labor Statistics supplies the <a href="https://data.bls.gov/timeseries/CUSR0000SA0">CPI index</a> and <a href="https://data.bls.gov/timeseries/LNS14000000">unemployment rate</a>. Saved snapshots cover January 2022 through August 2026 for macro data and September 18, 2026 for yields.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(treasury_url)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>yield_table <span class="ot">&lt;-</span> page <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>(<span class="at">fill =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>I converted the seasonally adjusted CPI index into its 12-month percentage change and measured each Treasury yield’s announcement-day move against the previous trading day’s close:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>inflation_yoy_pct <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">*</span> (cpi_index <span class="sc">/</span> <span class="fu">lag</span>(cpi_index, <span class="dv">12</span>) <span class="sc">-</span> <span class="dv">1</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>yield_change_bp <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">*</span> (yield_today_pct <span class="sc">-</span> yield_previous_pct)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The data cover 1,178 Treasury trading days, 56 monthly macro observations, and 18 verified rate changes. All sources are open official pages; no login, paywall, or access restriction was bypassed.</p>
+<p>I used <code>rvest</code> to extract yields from the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026">U.S. Treasury</a>, CPI and unemployment from the <a href="https://www.bls.gov/">Bureau of Labor Statistics</a>, and policy records from the <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm">Federal Reserve</a>. Its key value is extracting dates and decision text from <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">FOMC statements</a>, allowing yield changes to be matched to the days policy news reaches markets.</p>
+<p>CPI inflation is the seasonally adjusted index’s twelve-month percentage change. Each yield’s announcement-day change is its difference from the previous trading observation, multiplied by 100 to convert percentage points into <strong>basis points</strong>. The sample contains 1,178 Treasury dates, 56 macro months, and 18 rate-change announcements, ending in September 2026 for yields and August for macro data.</p>
 </section>
 <section id="the-policy-path-and-the-dual-mandate" class="level2">
 <h2 class="anchored" data-anchor-id="the-policy-path-and-the-dual-mandate">The policy path and the dual mandate</h2>
@@ -233,120 +192,120 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Announcement</th>
-<th style="text-align: right;">Decision</th>
-<th style="text-align: right;">Change (bp)</th>
-<th style="text-align: right;">New target range (%)</th>
+<th style="text-align: left;">Announcement</th>
+<th style="text-align: left;">Decision</th>
+<th style="text-align: left;">Change (bp)</th>
+<th style="text-align: left;">New target range (%)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Mar.&nbsp;16, 2022</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+25</td>
-<td style="text-align: right;">0.25–0.50</td>
+<td style="text-align: left;">Mar.&nbsp;16, 2022</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+25</td>
+<td style="text-align: left;">0.25–0.50</td>
 </tr>
 <tr class="even">
-<td>May 4, 2022</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+50</td>
-<td style="text-align: right;">0.75–1.00</td>
+<td style="text-align: left;">May. 04, 2022</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+50</td>
+<td style="text-align: left;">0.75–1.00</td>
 </tr>
 <tr class="odd">
-<td>Jun.&nbsp;15, 2022</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+75</td>
-<td style="text-align: right;">1.50–1.75</td>
+<td style="text-align: left;">Jun.&nbsp;15, 2022</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+75</td>
+<td style="text-align: left;">1.50–1.75</td>
 </tr>
 <tr class="even">
-<td>Jul.&nbsp;27, 2022</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+75</td>
-<td style="text-align: right;">2.25–2.50</td>
+<td style="text-align: left;">Jul.&nbsp;27, 2022</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+75</td>
+<td style="text-align: left;">2.25–2.50</td>
 </tr>
 <tr class="odd">
-<td>Sep.&nbsp;21, 2022</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+75</td>
-<td style="text-align: right;">3.00–3.25</td>
+<td style="text-align: left;">Sep.&nbsp;21, 2022</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+75</td>
+<td style="text-align: left;">3.00–3.25</td>
 </tr>
 <tr class="even">
-<td>Nov.&nbsp;2, 2022</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+75</td>
-<td style="text-align: right;">3.75–4.00</td>
+<td style="text-align: left;">Nov.&nbsp;02, 2022</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+75</td>
+<td style="text-align: left;">3.75–4.00</td>
 </tr>
 <tr class="odd">
-<td>Dec.&nbsp;14, 2022</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+50</td>
-<td style="text-align: right;">4.25–4.50</td>
+<td style="text-align: left;">Dec.&nbsp;14, 2022</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+50</td>
+<td style="text-align: left;">4.25–4.50</td>
 </tr>
 <tr class="even">
-<td>Feb.&nbsp;1, 2023</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+25</td>
-<td style="text-align: right;">4.50–4.75</td>
+<td style="text-align: left;">Feb.&nbsp;01, 2023</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+25</td>
+<td style="text-align: left;">4.50–4.75</td>
 </tr>
 <tr class="odd">
-<td>Mar.&nbsp;22, 2023</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+25</td>
-<td style="text-align: right;">4.75–5.00</td>
+<td style="text-align: left;">Mar.&nbsp;22, 2023</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+25</td>
+<td style="text-align: left;">4.75–5.00</td>
 </tr>
 <tr class="even">
-<td>May 3, 2023</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+25</td>
-<td style="text-align: right;">5.00–5.25</td>
+<td style="text-align: left;">May. 03, 2023</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+25</td>
+<td style="text-align: left;">5.00–5.25</td>
 </tr>
 <tr class="odd">
-<td>Jul.&nbsp;26, 2023</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+25</td>
-<td style="text-align: right;">5.25–5.50</td>
+<td style="text-align: left;">Jul.&nbsp;26, 2023</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+25</td>
+<td style="text-align: left;">5.25–5.50</td>
 </tr>
 <tr class="even">
-<td>Sep.&nbsp;18, 2024</td>
-<td style="text-align: right;">Cut</td>
-<td style="text-align: right;">−50</td>
-<td style="text-align: right;">4.75–5.00</td>
+<td style="text-align: left;">Sep.&nbsp;18, 2024</td>
+<td style="text-align: left;">Cut</td>
+<td style="text-align: left;">-50</td>
+<td style="text-align: left;">4.75–5.00</td>
 </tr>
 <tr class="odd">
-<td>Nov.&nbsp;7, 2024</td>
-<td style="text-align: right;">Cut</td>
-<td style="text-align: right;">−25</td>
-<td style="text-align: right;">4.50–4.75</td>
+<td style="text-align: left;">Nov.&nbsp;07, 2024</td>
+<td style="text-align: left;">Cut</td>
+<td style="text-align: left;">-25</td>
+<td style="text-align: left;">4.50–4.75</td>
 </tr>
 <tr class="even">
-<td>Dec.&nbsp;18, 2024</td>
-<td style="text-align: right;">Cut</td>
-<td style="text-align: right;">−25</td>
-<td style="text-align: right;">4.25–4.50</td>
+<td style="text-align: left;">Dec.&nbsp;18, 2024</td>
+<td style="text-align: left;">Cut</td>
+<td style="text-align: left;">-25</td>
+<td style="text-align: left;">4.25–4.50</td>
 </tr>
 <tr class="odd">
-<td>Sep.&nbsp;17, 2025</td>
-<td style="text-align: right;">Cut</td>
-<td style="text-align: right;">−25</td>
-<td style="text-align: right;">4.00–4.25</td>
+<td style="text-align: left;">Sep.&nbsp;17, 2025</td>
+<td style="text-align: left;">Cut</td>
+<td style="text-align: left;">-25</td>
+<td style="text-align: left;">4.00–4.25</td>
 </tr>
 <tr class="even">
-<td>Oct.&nbsp;29, 2025</td>
-<td style="text-align: right;">Cut</td>
-<td style="text-align: right;">−25</td>
-<td style="text-align: right;">3.75–4.00</td>
+<td style="text-align: left;">Oct.&nbsp;29, 2025</td>
+<td style="text-align: left;">Cut</td>
+<td style="text-align: left;">-25</td>
+<td style="text-align: left;">3.75–4.00</td>
 </tr>
 <tr class="odd">
-<td>Dec.&nbsp;10, 2025</td>
-<td style="text-align: right;">Cut</td>
-<td style="text-align: right;">−25</td>
-<td style="text-align: right;">3.50–3.75</td>
+<td style="text-align: left;">Dec.&nbsp;10, 2025</td>
+<td style="text-align: left;">Cut</td>
+<td style="text-align: left;">-25</td>
+<td style="text-align: left;">3.50–3.75</td>
 </tr>
 <tr class="even">
-<td>Sep.&nbsp;16, 2026</td>
-<td style="text-align: right;">Hike</td>
-<td style="text-align: right;">+25</td>
-<td style="text-align: right;">3.75–4.00</td>
+<td style="text-align: left;">Sep.&nbsp;16, 2026</td>
+<td style="text-align: left;">Hike</td>
+<td style="text-align: left;">+25</td>
+<td style="text-align: left;">3.75–4.00</td>
 </tr>
 </tbody>
 </table>
@@ -354,49 +313,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Four milestones make the macroeconomic sequence easier to see. Monthly values refer to the observation month, and the policy rate is the target-range midpoint then in effect.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 21%">
+<col style="width: 26%">
+<col style="width: 11%">
+<col style="width: 22%">
+<col style="width: 20%">
+<col style="width: 19%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Milestone</th>
-<th style="text-align: right;">Month</th>
-<th style="text-align: right;">Policy midpoint (%)</th>
-<th style="text-align: right;">CPI inflation (%)</th>
-<th style="text-align: right;">Unemployment (%)</th>
+<th style="text-align: left;">Milestone</th>
+<th style="text-align: left;">Month</th>
+<th style="text-align: left;">Policy midpoint (%)</th>
+<th style="text-align: left;">CPI inflation (%)</th>
+<th style="text-align: left;">Unemployment (%)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>First hike</td>
-<td style="text-align: right;">Mar.&nbsp;2022</td>
-<td style="text-align: right;">0.38</td>
-<td style="text-align: right;">8.6</td>
-<td style="text-align: right;">3.7</td>
+<td style="text-align: left;">First hike</td>
+<td style="text-align: left;">Mar.&nbsp;2022</td>
+<td style="text-align: left;">0.38</td>
+<td style="text-align: left;">8.6</td>
+<td style="text-align: left;">3.7</td>
 </tr>
 <tr class="even">
-<td>Last hike before easing</td>
-<td style="text-align: right;">Jul.&nbsp;2023</td>
-<td style="text-align: right;">5.38</td>
-<td style="text-align: right;">3.3</td>
-<td style="text-align: right;">3.5</td>
+<td style="text-align: left;">Last hike before easing</td>
+<td style="text-align: left;">Jul.&nbsp;2023</td>
+<td style="text-align: left;">5.38</td>
+<td style="text-align: left;">3.3</td>
+<td style="text-align: left;">3.5</td>
 </tr>
 <tr class="odd">
-<td>First cut</td>
-<td style="text-align: right;">Sep.&nbsp;2024</td>
-<td style="text-align: right;">4.88</td>
-<td style="text-align: right;">2.4</td>
-<td style="text-align: right;">4.1</td>
+<td style="text-align: left;">First cut</td>
+<td style="text-align: left;">Sep.&nbsp;2024</td>
+<td style="text-align: left;">4.88</td>
+<td style="text-align: left;">2.4</td>
+<td style="text-align: left;">4.1</td>
 </tr>
 <tr class="even">
-<td>Latest macro data</td>
-<td style="text-align: right;">Aug.&nbsp;2026</td>
-<td style="text-align: right;">3.63</td>
-<td style="text-align: right;">3.4</td>
-<td style="text-align: right;">4.1</td>
+<td style="text-align: left;">Latest macro data</td>
+<td style="text-align: left;">Aug.&nbsp;2026</td>
+<td style="text-align: left;">3.63</td>
+<td style="text-align: left;">3.4</td>
+<td style="text-align: left;">4.1</td>
 </tr>
 </tbody>
 </table>
@@ -406,7 +365,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Policy tightened after inflation surged, while unemployment stayed low. October 2025 CPI and unemployment observations are missing because of a lapse in appropriations.</figcaption>
 </figure>
 </div>
-<p>The first phase suggests that <strong>inflation could fall sharply without a large employment setback</strong>. During 2022–2023, the Fed raised its policy midpoint above 5% to restrain spending and price pressure. Inflation fell from its 9.0% peak to 3.3% by October 2023, while unemployment was 3.9%, close to its 4.0% starting level. This is consistent with progress toward both mandates, although policy was not the only influence. Keeping rates high then allowed restraint to continue: by August 2024 inflation had fallen to 2.6%, while unemployment had edged up to 4.2%. The improving inflation picture and softer labor market help explain the shift toward cuts in September. Through 2025, inflation generally fluctuated around 2.5–3%, but unemployment reached 4.4% by September, strengthening the case for supporting demand. Cuts do not directly suppress inflation; they can follow earlier disinflation while its effects continue. The balance shifted again in spring 2026: inflation rose to 4.2% in May, then eased to 3.4% in August, while unemployment declined to 4.1%. <strong>Renewed price pressure alongside a firmer labor market provides an economic rationale for the September hike.</strong> Its effects are not yet observable here. CPI illustrates the pattern; the Fed’s formal inflation goal uses PCE prices.</p>
+<p><strong>The observed policy cycle is consistent with progress toward balancing inflation and employment, but not a completed or permanent success.</strong> Inflation fell sharply without a large rise in unemployment, then rebounded. Four stages show how the balance changed:</p>
+<ul>
+<li><strong>Tightening, 2022–2023:</strong> the policy midpoint rose above 5%. Inflation fell from its 9.0% peak to 3.3% by October 2023, while unemployment was 3.9%, close to its 4.0% starting level.</li>
+<li><strong>Holding high rates, 2023–2024:</strong> by August 2024, inflation had fallen to 2.6%, while unemployment reached 4.2%. Further disinflation coincided with a softer labor market.</li>
+<li><strong>Easing, 2024–2025:</strong> inflation generally stayed around 2.5–3%, while unemployment reached 4.4% in September 2025. The shift toward cuts was consistent with greater concern about employment.</li>
+<li><strong>Renewed tightening, 2026:</strong> inflation reached 4.2% in May and eased to 3.4% in August, with unemployment at 4.1%. Renewed price pressure provides context for September’s hike; its macroeconomic effects are outside this sample.</li>
+</ul>
+<p>These patterns cannot isolate policy’s causal contribution. CPI tracks price pressure here; the Fed’s formal inflation goal uses PCE prices.</p>
 </section>
 <section id="three-maturities-one-policy-cycle" class="level2">
 <h2 class="anchored" data-anchor-id="three-maturities-one-policy-cycle">Three maturities, one policy cycle</h2>
@@ -414,33 +380,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Maturity</th>
+<th style="text-align: left;">Maturity</th>
 <th style="text-align: right;">Start (%)</th>
 <th style="text-align: right;">Sample peak (%)</th>
-<th style="text-align: right;">Peak date</th>
+<th style="text-align: left;">Peak date</th>
 <th style="text-align: right;">Latest (%)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>2-year</td>
+<td style="text-align: left;">2-year</td>
 <td style="text-align: right;">0.78</td>
 <td style="text-align: right;">5.19</td>
-<td style="text-align: right;">Oct.&nbsp;17, 2023</td>
+<td style="text-align: left;">Oct.&nbsp;17, 2023</td>
 <td style="text-align: right;">4.76</td>
 </tr>
 <tr class="even">
-<td>10-year</td>
+<td style="text-align: left;">10-year</td>
 <td style="text-align: right;">1.63</td>
 <td style="text-align: right;">5.01</td>
-<td style="text-align: right;">Sep.&nbsp;16, 2026</td>
+<td style="text-align: left;">Sep.&nbsp;16, 2026</td>
 <td style="text-align: right;">5.01</td>
 </tr>
 <tr class="odd">
-<td>30-year</td>
+<td style="text-align: left;">30-year</td>
 <td style="text-align: right;">2.01</td>
 <td style="text-align: right;">5.37</td>
-<td style="text-align: right;">Sep.&nbsp;10, 2026</td>
+<td style="text-align: left;">Sep.&nbsp;10, 2026</td>
 <td style="text-align: right;">5.34</td>
 </tr>
 </tbody>
@@ -451,42 +417,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Daily 2-year, 10-year, and 30-year Treasury yields with Fed rate-change announcements.</figcaption>
 </figure>
 </div>
-<p>During 2022–2023, all three yields rose, but the 2-year became the highest and peaked at 5.19%. <strong>Investors appeared to expect high rates now, but lower rates later.</strong> That explains why lending for longer did not always earn a higher yield: expected future rate cuts could outweigh the extra compensation investors require for long-term uncertainty, called the term premium. By October 2024, the usual ordering had returned, with the 30-year above the 10-year and 2-year. During 2025, shorter yields declined more, widening the 30-minus-2-year gap from 0.61 percentage points in January to 1.07 in October. Expected easing can explain relief at the short end; continuing inflation uncertainty or greater government borrowing could help explain why long yields remained elevated. In 2026 the short end rose again, narrowing that gap, yet the latest 10- and 30-year yields were still 5.01% and 5.34%. <strong>Earlier policy cuts had not delivered lasting relief in long-term borrowing costs.</strong> Those high yields can make government refinancing and private loans linked to Treasury rates more expensive. The chart reveals this financing pressure, though it cannot identify which underlying driver caused it.</p>
+<p><strong>Treasury yields did not move uniformly across maturities: the short end reversed more visibly with the policy cycle, while long yields remained elevated.</strong> The 2-year yield peaked at 5.19% in 2023, above longer maturities. By October 2024, the 30-year again exceeded the 10-year and 2-year. During 2025, the 30-minus-2-year gap widened from 0.61 percentage points in January to 1.07 in October as shorter yields fell more. By September 2026, 10- and 30-year yields were still 5.01% and 5.34%, showing that earlier cuts had not ensured lasting relief in long-term financing costs.</p>
 <p>The announcement-day distribution makes that maturity contrast more direct.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 21%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 25%">
+<col style="width: 27%">
+<col style="width: 28%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Maturity</th>
+<th style="text-align: left;">Maturity</th>
 <th style="text-align: right;">Meetings</th>
 <th style="text-align: right;">Mean absolute move (bp)</th>
-<th style="text-align: right;">Median (bp)</th>
-<th style="text-align: right;">Maximum (bp)</th>
+<th style="text-align: right;">Median absolute move (bp)</th>
+<th style="text-align: right;">Maximum absolute move (bp)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>2-year</td>
+<td style="text-align: left;">2-year</td>
 <td style="text-align: right;">18</td>
 <td style="text-align: right;">8.7</td>
 <td style="text-align: right;">7.0</td>
 <td style="text-align: right;">25</td>
 </tr>
 <tr class="even">
-<td>10-year</td>
+<td style="text-align: left;">10-year</td>
 <td style="text-align: right;">18</td>
 <td style="text-align: right;">6.4</td>
 <td style="text-align: right;">5.0</td>
 <td style="text-align: right;">16</td>
 </tr>
 <tr class="odd">
-<td>30-year</td>
+<td style="text-align: left;">30-year</td>
 <td style="text-align: right;">18</td>
 <td style="text-align: right;">3.9</td>
 <td style="text-align: right;">2.5</td>
@@ -500,14 +466,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Absolute announcement-day Treasury yield changes by maturity.</figcaption>
 </figure>
 </div>
-<p><strong>Announcement-day yield movements were largest at two years and smallest at thirty years:</strong> median absolute changes were 7.0, 5.0, and 2.5 basis points. This fits the way policy reaches bond markets. A 2-year yield depends heavily on the next few years of policy, while a 30-year yield also reflects rates and risks far beyond the current cycle. A change in the near-term outlook therefore tends to matter more for the shorter maturity. When yields rise, new borrowing becomes more expensive and existing bond prices fall, extending policy’s reach beyond overnight lending. The practical distinction is that <strong>short yields respond more to near-term policy news, but long bonds can still suffer substantial price losses</strong> because a given yield increase affects their value more. These daily moves include anticipation and other news, so they show a pattern consistent with transmission rather than a precise causal effect.</p>
+<p><strong>Announcement-day movements were larger at shorter maturities:</strong> median absolute changes were 7.0, 5.0, and 2.5 basis points for 2-, 10-, and 30-year yields. The 2-year yield is more closely tied to near-term policy expectations; longer yields also incorporate distant rates and compensation for long-term risk. This provides an interpretation of the maturity pattern, not proof that each announced decision caused the daily move. The sample includes only rate-changing meetings, and daily changes also contain other news.</p>
 </section>
 <section id="so-did-the-fed-pull-it-off" class="level2">
 <h2 class="anchored" data-anchor-id="so-did-the-fed-pull-it-off">So, did the Fed pull it off?</h2>
-<p><strong>Policy rates can help balance inflation and employment, but that balance needs continued adjustment.</strong> Inflation fell from roughly 9% to 2.4% by the first cut, while unemployment reached 4.1% without surging—a pattern consistent with progress toward the Fed’s dual mandate. Inflation’s later rebound to 3.4% shows that the task was unfinished. Further tightening could help if price pressure persists, but excessive tightening risks weakening hiring; easing too soon risks reviving inflation. These observations support a careful balancing act, not proof that policy alone caused the improvement.</p>
-<p><strong>Policy also reaches Treasury yields, with stronger announcement-day reactions at shorter maturities:</strong> median moves were 7.0, 5.0, and 2.5 basis points. Yet 10- and 30-year yields above 5% show that earlier cuts did not ensure cheap long-term financing. Further hikes could increase borrowing costs, but credible inflation control could also reassure lenders and bring long yields down. <strong>The policy challenge is to reduce inflation without unnecessarily weakening jobs or adding to financing pressure.</strong> Success should therefore be judged by inflation, employment, and borrowing conditions together—not by the rate decision alone.</p>
+<p><strong>The evidence suggests progress in balancing inflation and employment, alongside stronger announcement-day yield movements at shorter maturities.</strong> Inflation’s rebound shows why that balance requires reassessment rather than declaring victory after disinflation. For investors, the practical implication is to distinguish near-term yield sensitivity from long-bond price risk: smaller yield moves do not necessarily mean smaller price losses, because longer-duration bonds are more sensitive to a given yield change. For borrowers, a Fed cut alone is insufficient evidence that long-term financing has become cheaper; the relevant maturity’s market yield still matters.</p>
 <div class="source-note">
-<p><strong>Sources and reproducibility.</strong> U.S. Treasury daily par yields; Federal Reserve target-rate history, FOMC calendar, and policy statements; U.S. Bureau of Labor Statistics CPI and unemployment tables. See the <a href="https://xia071212.github.io/blog2repo/replication-guide.html">full replication guide</a>, the <a href="https://github.com/xia071212/blog2repo#readme">README</a>, and the analysis <a href="https://github.com/xia071212/blog2repo">repository</a>. The analysis uses saved public-page snapshots and records source URLs and file fingerprints in the analysis repository’s <code>results/</code> folder.</p>
+<p><strong>Sources and reproducibility.</strong> U.S. Treasury daily par yields; Federal Reserve target-rate history, FOMC calendar, and policy statements; U.S. Bureau of Labor Statistics CPI and unemployment tables. See the <a href="https://github.com/xia071212/blog2repo#readme">README</a>, and the analysis <a href="https://github.com/xia071212/blog2repo">repository</a>. The analysis uses saved public-page snapshots and records source URLs and file fingerprints in the analysis repository’s <code>results/</code> folder.</p>
 </div>
 
 
