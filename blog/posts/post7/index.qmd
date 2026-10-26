@@ -1,0 +1,75 @@
+---
+title: "Closer to AI, Easier to Replace?"
+description: "Does a closer connection to AI mean a greater risk of job replacement?"
+author: "Yuting Xia"
+date: 2026-10-26
+date-format: "MMMM D, YYYY"
+categories: [Artificial Intelligence, Employment, Interactive Plotly]
+body-classes: blog7-post
+image: illustration.png
+image-alt: "Watercolor illustration of an AI assistant alongside a programmer, financial adviser, and retail worker."
+toc: true
+css: blog7.css
+resources:
+  - interactive.html
+  - replication.zip
+---
+
+If AI can perform more of a job’s tasks, it seems natural to expect fewer workers to be needed. Yet AI might also help workers produce more, making their skills more valuable. So this article explores whether a job’s closer connection to AI means a greater risk of replacement.
+
+![](illustration.png){fig-alt="An AI assistant connects to tasks in programming, financial advice, and retail in a hand-painted workplace scene."}
+
+## How do we measure the connection to AI?
+
+[Anthropic’s Economic Index](https://www.anthropic.com/research/labor-market-impacts) maps observed Claude usage to work tasks and occupations. The [BLS Employment Projections database](https://www.bls.gov/emp/projections-archive.htm) provides U.S. employment by occupation in 2024 and projected employment in 2034. Python joins them using Standard Occupational Classification (SOC) codes; an occupation such as accounting can span many industries.
+
+**AI exposure** summarizes observed AI use across occupational tasks, accounting for factors such as task time and usage patterns. **Task breadth** is the share of matched tasks with positive AI penetration, counting each task equally. Neither measures the probability that a worker will lose their job.
+
+The matched sample contains **722 occupations**, retaining those with at least 95% task matching against O*NET 30.0 task descriptions. The vertical axis measures projected employment growth. It provides an employment outlook, **not an observed AI replacement rate**.
+
+::: {.column-page}
+```{=html}
+<iframe id="ai-chart" src="interactive.html" title="Interactive AI exposure and employment outlook explorer" style="width:100%;height:1050px;border:0;border-radius:12px;" loading="lazy"></iframe>
+<script>
+const chartFrame=document.getElementById("ai-chart");
+chartFrame.addEventListener("load",()=>{const main=chartFrame.contentDocument.querySelector("main");const resize=()=>{chartFrame.style.height=Math.ceil(main.getBoundingClientRect().height+24)+"px"};new ResizeObserver(resize).observe(main);resize();});
+</script>
+```
+:::
+
+*Explore: hover for employment and sample coverage; click a group to see its occupations. Search for one occupation to isolate it, then clear the search to restore the group. Switch the horizontal axis to compare exposure with task breadth.*
+
+Group exposure and breadth use 2024 employment weights. Bubble area represents sample employment; group growth uses summed employment. Hover shows sample coverage relative to the official group. Detailed dots are equal-sized so smaller occupations remain visible.
+
+## Does closer AI exposure mean more replacement?
+
+**The regressions do not show a stable negative relationship between AI exposure and projected employment growth.** For all 722 occupations, I regress 2024–2034 percentage employment growth separately on each AI indicator. Coefficients below show the growth difference associated with a **10-percentage-point increase** in the indicator.
+
+The main regression uses 2024 employment weights. The alternatives add occupational-group controls or give occupations equal weight. Brackets contain 95% HC3 robust confidence intervals: model-based uncertainty across occupations, not BLS forecast uncertainty.
+
+{{< include regression_table.md >}}
+
+For AI exposure, the employment-weighted estimate is **−0.53 percentage points**, but its interval includes zero. Adding group controls changes the estimate to **+0.43**; equal occupation weights give **+0.11**. Thus, the negative association depends on weighting and occupational composition. This does not prove that AI causes no displacement: the outcome is projected net employment growth, which can combine job creation and job losses.
+
+The group bubbles illustrate why a single replacement story is insufficient. Business/financial and sales occupations have similar exposure (28.8% versus 27.5%), but projected growth of +5.2% versus −2.6%. Computer/mathematical and office/administrative occupations offer another contrast: exposure of 35.3% versus 33.9%, with growth of +10.0% versus −3.9%. These examples illustrate the variation; the regression summarizes the full sample.
+
+## Does broader task coverage mean greater risk?
+
+**Task breadth also fails to show a robust negative association with projected growth.** The employment-weighted estimate is **−0.39 growth points per 10 points of breadth**, compared with **+0.94** after group controls and **+0.41** under equal weights. All three intervals include zero. Broader observed task coverage therefore does not consistently correspond to weaker employment projections in this sample.
+
+Switching the chart to task breadth illustrates this result: business/financial and office/administrative occupations have similar coverage (24.2% and 25.1%) but opposite growth projections. Task counts omit time requirements and importance: data entry keyers have only 1 of 9 matched tasks covered, despite 67.1% exposure. Breadth also does not distinguish assistance from replacement.
+
+## How might we explain the difference?
+
+**AI may complement professional skills while replacing routine tasks.** Coding or information-processing assistance could free workers for design, judgment, and client decisions; automated transactions could reduce staffing needs.
+
+**Demand may offset labor savings:** cheaper software or advice could attract more customers, supporting employment despite lower labor requirements per service. **Trust, accountability, and unusual cases may preserve human roles**, while adoption costs delay substitution. These mechanisms could explain divergent outlooks, but the regressions do not identify them; BLS projections incorporate forces beyond AI.
+
+## Takeaway
+
+**A closer connection to AI does not consistently coincide with a weaker employment outlook.** For both indicators, regression estimates change direction across specifications and their confidence intervals include zero. AI may save labor on some tasks while complementing skills or expanding demand elsewhere, so exposure need not translate directly into falling employment. For our own skill development and career choices, **how AI penetrates specific tasks may matter more than whether a job is simply labeled “AI-exposed.”** It is worth learning to use AI while strengthening judgment and interpersonal skills; exposure alone is not a reason to avoid an occupation.
+
+::: {.source-note}
+**Sources and replication.** Anthropic supplies occupational exposure and task penetration; BLS supplies the archived 2024–2034 projections; [O*NET](https://www.onetcenter.org/database.html) supplies task descriptions. [GitHub replication repository](https://github.com/xia071212/blog7repo) and [downloadable files](replication.zip), including the source data, Python scripts, results, and README. All comparisons are descriptive and use the matched sample.
+:::
+
