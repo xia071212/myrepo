@@ -57,7 +57,7 @@ For these groups, counting how widely AI appears across tasks does not resolve t
 
 ## How might we explain the difference?
 
-**AI may complement professional skills while replacing routine tasks.** Coding or information-processing assistance could free workers for design, judgment, and client decisions; automated transactions could reduce staffing needs.
+**AI may complement professional skills while replacing routine tasks.** This offers one possible explanation for the contrast between office support and computer/math occupations. Automating repetitive clerical tasks, such as data entry and document processing, could reduce demand for some office-support roles. Meanwhile, wider AI adoption could increase demand for workers who develop software, integrate AI systems, and evaluate their outputs. AI could also help these workers spend more time on design and complex problem-solving. Both groups contain varied tasks and skill requirements; the chart is consistent with this explanation, but does not establish that AI causes either projection.
 
 **Demand may offset labor savings:** cheaper software or advice could attract more customers, supporting employment despite lower labor requirements per service. **Trust, accountability, and unusual cases may preserve human roles**, while adoption costs delay substitution. These mechanisms could explain divergent outlooks, but these chart comparisons do not establish them; BLS projections incorporate forces beyond AI.
 
