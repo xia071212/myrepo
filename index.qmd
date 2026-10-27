@@ -3,7 +3,7 @@ title: ""
 ---
 
 <figure class="autumn-vignette">
-  <img src="images/halloween/autumn-reading.png" alt="A vintage comic illustration of Snoopy reading beside autumn pumpkins, books, and a wizard hat.">
+  <img src="images/halloween/autumn-reading.png" alt="A vintage storybook illustration of a Golden Retriever reading beside autumn pumpkins, books, and a wizard hat.">
   <figcaption>October, between the pages.</figcaption>
 </figure>
 
