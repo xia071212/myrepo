@@ -9,6 +9,8 @@ website:
   site-url: https://xia071212.github.io/myrepo/
   title: "Yuting Xia"
   navbar:
+    logo: images/halloween/golden-autumn-accent.png
+    logo-alt: "Golden Retriever with autumn books and a pumpkin"
     left:
       - href: index.qmd
         text: Home
@@ -20,11 +22,13 @@ website:
       © 2026 Yuting Xia
     left: |
       ![](/images/UniversityofPennsylvania_FullLogo_RGB.png){width=100px}
+    right: |
+      ![](/images/halloween/golden-autumn-accent.png){width=75px fig-alt=""}
 
 format:
   html:
     theme: flatly
-    css: [styles.css, halloween.css]
+    css: [styles.css, autumn-2026-v2.css]
     toc: false
     lang: en
     html-math-method: mathml
