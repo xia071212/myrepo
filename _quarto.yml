@@ -28,7 +28,7 @@ website:
 format:
   html:
     theme: flatly
-    css: [styles.css, autumn-2026-v4.css]
+    css: [styles.css, autumn-2026-v5.css]
     include-after-body: seasonal-decor.html
     toc: false
     lang: en
