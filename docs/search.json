@@ -14,130 +14,81 @@
     "text": "Request my resume by email"
   },
   {
-    "objectID": "blog/posts/post2/index.html",
-    "href": "blog/posts/post2/index.html",
-    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "objectID": "blog/posts/post7/index.html",
+    "href": "blog/posts/post7/index.html",
+    "title": "Closer to AI, Easier to Replace?",
     "section": "",
-    "text": "Higher interest rates can restrain inflation but weaken hiring; comparing the Fed’s policy cycle with labor-market conditions and Treasury yields reveals both this balancing act and its transmission across maturities."
+    "text": "If AI can perform more of a job’s tasks, it seems natural to expect fewer workers to be needed. Yet AI might also help workers produce more, making their skills more valuable. So this article explores whether a job’s closer connection to AI means a greater risk of replacement."
   },
   {
-    "objectID": "blog/posts/post2/index.html#from-public-pages-to-comparable-data",
-    "href": "blog/posts/post2/index.html#from-public-pages-to-comparable-data",
-    "title": "One Policy, Two Mandates, Three Treasury Reactions",
-    "section": "From public pages to comparable data",
-    "text": "From public pages to comparable data\nI used rvest to extract yields from the U.S. Treasury, CPI and unemployment from the Bureau of Labor Statistics, and policy records from the Federal Reserve. Its key value is extracting dates and decision text from FOMC statements, allowing yield changes to be matched to the days policy news reaches markets.\nCPI inflation is the seasonally adjusted index’s twelve-month percentage change. Each yield’s announcement-day change is its difference from the previous trading observation, multiplied by 100 to convert percentage points into basis points. The sample contains 1,178 Treasury dates, 56 macro months, and 18 rate-change announcements, ending in September 2026 for yields and August for macro data."
+    "objectID": "blog/posts/post7/index.html#how-do-we-measure-the-connection-to-ai",
+    "href": "blog/posts/post7/index.html#how-do-we-measure-the-connection-to-ai",
+    "title": "Closer to AI, Easier to Replace?",
+    "section": "How do we measure the connection to AI?",
+    "text": "How do we measure the connection to AI?\nAnthropic’s Economic Index maps observed Claude usage to work tasks and occupations. The BLS Employment Projections database provides U.S. employment by occupation in 2024 and projected employment in 2034. Python joins them using Standard Occupational Classification (SOC) codes; an occupation such as accounting can span many industries.\nAI exposure summarizes observed AI use across occupational tasks, accounting for factors such as task time and usage patterns. Task breadth is the share of matched tasks with positive AI penetration, counting each task equally. Neither measures the probability that a worker will lose their job.\nThe matched sample contains 722 occupations, retaining those with at least 95% task matching against O*NET 30.0 task descriptions. The vertical axis measures projected employment growth. It provides an employment outlook, not an observed AI replacement rate.\n\n\n\n\nExplore: hover for employment and sample coverage; click a group to see its occupations. Search for one occupation to isolate it, then clear the search to restore the group. Switch the horizontal axis to compare exposure with task breadth.\nGroup exposure and breadth use 2024 employment weights. Bubble area represents sample employment; group growth uses summed employment. Hover shows sample coverage relative to the official group. Detailed dots are equal-sized so smaller occupations remain visible."
   },
   {
-    "objectID": "blog/posts/post2/index.html#the-policy-path-and-the-dual-mandate",
-    "href": "blog/posts/post2/index.html#the-policy-path-and-the-dual-mandate",
-    "title": "One Policy, Two Mandates, Three Treasury Reactions",
-    "section": "The policy path and the dual mandate",
-    "text": "The policy path and the dual mandate\nThe full schedule shows an unusually concentrated tightening phase, followed by a later easing cycle and the most recent increase.\n\n\n\n\nAnnouncement\nDecision\nChange (bp)\nNew target range (%)\n\n\n\n\nMar. 16, 2022\nHike\n+25\n0.25–0.50\n\n\nMay. 04, 2022\nHike\n+50\n0.75–1.00\n\n\nJun. 15, 2022\nHike\n+75\n1.50–1.75\n\n\nJul. 27, 2022\nHike\n+75\n2.25–2.50\n\n\nSep. 21, 2022\nHike\n+75\n3.00–3.25\n\n\nNov. 02, 2022\nHike\n+75\n3.75–4.00\n\n\nDec. 14, 2022\nHike\n+50\n4.25–4.50\n\n\nFeb. 01, 2023\nHike\n+25\n4.50–4.75\n\n\nMar. 22, 2023\nHike\n+25\n4.75–5.00\n\n\nMay. 03, 2023\nHike\n+25\n5.00–5.25\n\n\nJul. 26, 2023\nHike\n+25\n5.25–5.50\n\n\nSep. 18, 2024\nCut\n-50\n4.75–5.00\n\n\nNov. 07, 2024\nCut\n-25\n4.50–4.75\n\n\nDec. 18, 2024\nCut\n-25\n4.25–4.50\n\n\nSep. 17, 2025\nCut\n-25\n4.00–4.25\n\n\nOct. 29, 2025\nCut\n-25\n3.75–4.00\n\n\nDec. 10, 2025\nCut\n-25\n3.50–3.75\n\n\nSep. 16, 2026\nHike\n+25\n3.75–4.00\n\n\n\n\nFour milestones make the macroeconomic sequence easier to see. Monthly values refer to the observation month, and the policy rate is the target-range midpoint then in effect.\n\n\n\n\n\n\n\n\n\n\nMilestone\nMonth\nPolicy midpoint (%)\nCPI inflation (%)\nUnemployment (%)\n\n\n\n\nFirst hike\nMar. 2022\n0.38\n8.6\n3.7\n\n\nLast hike before easing\nJul. 2023\n5.38\n3.3\n3.5\n\n\nFirst cut\nSep. 2024\n4.88\n2.4\n4.1\n\n\nLatest macro data\nAug. 2026\n3.63\n3.4\n4.1\n\n\n\n\n\n\nPolicy tightened after inflation surged, while unemployment stayed low. October 2025 CPI and unemployment observations are missing because of a lapse in appropriations.\n\n\nThe observed policy cycle is consistent with progress toward balancing inflation and employment, but not a completed or permanent success. Inflation fell sharply without a large rise in unemployment, then rebounded. Four stages show how the balance changed:\n\nTightening, 2022–2023: the policy midpoint rose above 5%. Inflation fell from its 9.0% peak to 3.3% by October 2023, while unemployment was 3.9%, close to its 4.0% starting level.\nHolding high rates, 2023–2024: by August 2024, inflation had fallen to 2.6%, while unemployment reached 4.2%. Further disinflation coincided with a softer labor market.\nEasing, 2024–2025: inflation generally stayed around 2.5–3%, while unemployment reached 4.4% in September 2025. The shift toward cuts was consistent with greater concern about employment.\nRenewed tightening, 2026: inflation reached 4.2% in May and eased to 3.4% in August, with unemployment at 4.1%. Renewed price pressure provides context for September’s hike; its macroeconomic effects are outside this sample.\n\nThese patterns cannot isolate policy’s causal contribution. CPI tracks price pressure here; the Fed’s formal inflation goal uses PCE prices."
+    "objectID": "blog/posts/post7/index.html#does-closer-ai-exposure-mean-more-replacement",
+    "href": "blog/posts/post7/index.html#does-closer-ai-exposure-mean-more-replacement",
+    "title": "Closer to AI, Easier to Replace?",
+    "section": "Does closer AI exposure mean more replacement?",
+    "text": "Does closer AI exposure mean more replacement?\nSimilar AI exposure can accompany very different employment outlooks. In the group view, compare business and financial operations with sales: their exposure is almost the same, at 28.8% and 27.5%, yet projected employment grows 5.2% in business/finance and falls 2.6% in sales. Their bubbles sit close together horizontally but on opposite sides of zero growth.\nComputer and mathematical occupations provide a second comparison. Their exposure is 35.3%, slightly higher than the 33.9% for office and administrative support. Yet computer/math employment is projected to grow 10.0%, while office support declines 3.9%. The more exposed group has the stronger outlook, which challenges the simple expectation that closer contact with AI necessarily means fewer jobs.\nThese are comparisons of the matched occupations within each group, not every job in the economy. They show why exposure alone is insufficient to judge an occupation’s outlook. They cannot tell us how much employment would grow without AI, or how many workers AI might replace within a growing group."
   },
   {
-    "objectID": "blog/posts/post2/index.html#three-maturities-one-policy-cycle",
-    "href": "blog/posts/post2/index.html#three-maturities-one-policy-cycle",
-    "title": "One Policy, Two Mandates, Three Treasury Reactions",
-    "section": "Three maturities, one policy cycle",
-    "text": "Three maturities, one policy cycle\nThe yield summary compares January 3, 2022 with September 18, 2026; peaks are sample highs.\n\n\n\nMaturity\nStart (%)\nSample peak (%)\nPeak date\nLatest (%)\n\n\n\n\n2-year\n0.78\n5.19\nOct. 17, 2023\n4.76\n\n\n10-year\n1.63\n5.01\nSep. 16, 2026\n5.01\n\n\n30-year\n2.01\n5.37\nSep. 10, 2026\n5.34\n\n\n\n\n\n\nDaily 2-year, 10-year, and 30-year Treasury yields with Fed rate-change announcements.\n\n\nTreasury yields did not move uniformly across maturities: the short end reversed more visibly with the policy cycle, while long yields remained elevated. The 2-year yield peaked at 5.19% in 2023, above longer maturities. By October 2024, the 30-year again exceeded the 10-year and 2-year. During 2025, the 30-minus-2-year gap widened from 0.61 percentage points in January to 1.07 in October as shorter yields fell more. By September 2026, 10- and 30-year yields were still 5.01% and 5.34%, showing that earlier cuts had not ensured lasting relief in long-term financing costs.\nThe announcement-day distribution makes that maturity contrast more direct.\n\n\n\n\n\n\n\n\n\n\nMaturity\nMeetings\nMean absolute move (bp)\nMedian absolute move (bp)\nMaximum absolute move (bp)\n\n\n\n\n2-year\n18\n8.7\n7.0\n25\n\n\n10-year\n18\n6.4\n5.0\n16\n\n\n30-year\n18\n3.9\n2.5\n10\n\n\n\n\n\n\nAbsolute announcement-day Treasury yield changes by maturity.\n\n\nAnnouncement-day movements were larger at shorter maturities: median absolute changes were 7.0, 5.0, and 2.5 basis points for 2-, 10-, and 30-year yields. The 2-year yield is more closely tied to near-term policy expectations; longer yields also incorporate distant rates and compensation for long-term risk. This provides an interpretation of the maturity pattern, not proof that each announced decision caused the daily move. The sample includes only rate-changing meetings, and daily changes also contain other news."
+    "objectID": "blog/posts/post7/index.html#does-broader-task-coverage-mean-greater-risk",
+    "href": "blog/posts/post7/index.html#does-broader-task-coverage-mean-greater-risk",
+    "title": "Closer to AI, Easier to Replace?",
+    "section": "Does broader task coverage mean greater risk?",
+    "text": "Does broader task coverage mean greater risk?\nThe task-breadth view shows the same contrast: broad coverage can coexist with growth or decline. Switch the horizontal axis to task breadth. Business/finance and office support have nearly identical coverage, at 24.2% and 25.1%, but their growth projections remain +5.2% and −3.9%. Sales has somewhat narrower coverage (22.2%) and still declines, while computer/math has the broadest coverage of these four groups (34.1%) and the strongest growth (+10.0%).\nFor these groups, counting how widely AI appears across tasks does not resolve the difference in employment outlooks. Breadth counts tasks equally, regardless of their time requirements or importance, and does not distinguish assistance from replacement. Clicking a group and inspecting an occupation’s task panel helps readers see what lies behind its average, rather than treating all covered tasks as equivalent."
   },
   {
-    "objectID": "blog/posts/post2/index.html#so-did-the-fed-pull-it-off",
-    "href": "blog/posts/post2/index.html#so-did-the-fed-pull-it-off",
-    "title": "One Policy, Two Mandates, Three Treasury Reactions",
-    "section": "So, did the Fed pull it off?",
-    "text": "So, did the Fed pull it off?\nThe evidence suggests progress in balancing inflation and employment, alongside stronger announcement-day yield movements at shorter maturities. Inflation’s rebound shows why that balance requires reassessment rather than declaring victory after disinflation. For investors, the practical implication is to distinguish near-term yield sensitivity from long-bond price risk: smaller yield moves do not necessarily mean smaller price losses, because longer-duration bonds are more sensitive to a given yield change. For borrowers, a Fed cut alone is insufficient evidence that long-term financing has become cheaper; the relevant maturity’s market yield still matters.\n\nSources and reproducibility. U.S. Treasury daily par yields; Federal Reserve target-rate history, FOMC calendar, and policy statements; U.S. Bureau of Labor Statistics CPI and unemployment tables. See the README, and the analysis repository. The analysis uses saved public-page snapshots and records source URLs and file fingerprints in the analysis repository’s results/ folder."
+    "objectID": "blog/posts/post7/index.html#how-might-we-explain-the-difference",
+    "href": "blog/posts/post7/index.html#how-might-we-explain-the-difference",
+    "title": "Closer to AI, Easier to Replace?",
+    "section": "How might we explain the difference?",
+    "text": "How might we explain the difference?\nAI may complement professional skills while replacing routine tasks. This offers one possible explanation for the contrast between office support and computer/math occupations. Automating repetitive clerical tasks, such as data entry and document processing, could reduce demand for some office-support roles. Meanwhile, wider AI adoption could increase demand for workers who develop software, integrate AI systems, and evaluate their outputs. AI could also help these workers spend more time on design and complex problem-solving. Both groups contain varied tasks and skill requirements; the chart is consistent with this explanation, but does not establish that AI causes either projection.\nDemand may offset labor savings: cheaper software or advice could attract more customers, supporting employment despite lower labor requirements per service. Trust, accountability, and unusual cases may preserve human roles, while adoption costs delay substitution. These mechanisms could explain divergent outlooks, but these chart comparisons do not establish them; BLS projections incorporate forces beyond AI."
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "blog/posts/post7/index.html#takeaway",
+    "href": "blog/posts/post7/index.html#takeaway",
+    "title": "Closer to AI, Easier to Replace?",
+    "section": "Takeaway",
+    "text": "Takeaway\nA closer connection to AI does not consistently coincide with a weaker employment outlook. Business/finance and computer/math are projected to expand, while similarly exposed sales and office-support groups contract; switching to task breadth preserves this contrast. AI may save labor on some tasks while complementing skills or expanding demand elsewhere, so exposure need not translate directly into falling employment. For our own skill development and career choices, how AI penetrates specific tasks may matter more than whether a job is simply labeled “AI-exposed.” It is worth learning to use AI while strengthening judgment and interpersonal skills; exposure alone is not a reason to avoid an occupation.\n\nSources and replication. Anthropic supplies occupational exposure and task penetration; BLS supplies the archived 2024–2034 projections; O*NET supplies task descriptions. GitHub replication repository and downloadable files, including the source data, Python scripts, results, and README. All comparisons are descriptive and use the matched sample."
+  },
+  {
+    "objectID": "blog/posts/post5/index.html",
+    "href": "blog/posts/post5/index.html",
+    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
     "section": "",
-    "text": "Closer to AI, Easier to Replace?\n\n\nDoes a closer connection to AI mean a greater risk of job replacement?\n\n\n\n\n\nOct 26, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nDoes the year change the parent–child income relationship?\n\n\nHow strongly is children’s income associated with their parents’ income—and does the answer depend on the year we measure?\n\n\n\n\n\nOct 22, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nLow Taxes, Deep Pockets? Who Funds Your State?\n\n\nDo states that collect more tax really have richer governments, and who actually pays the bill?\n\n\n\n\n\nOct 19, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nHigh Yields, Hot Currencies?\n\n\nDo higher government bond yields make a currency more attractive—or is the yield advantage over other countries what matters?\n\n\n\n\n\nOct 6, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nTech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?\n\n\nA look at the typical worker’s earnings across occupations, ages, and fifty income years.\n\n\n\n\n\nSep 28, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nOne Policy, Two Mandates, Three Treasury Reactions\n\n\nCan Fed interest-rate policy balance inflation and employment, and do Treasury yields respond differently across maturities?\n\n\n\n\n\nSep 21, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nSunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\nNo matching items"
+    "text": "Taxes vary widely across U.S. states and matter when choosing where to live. Higher taxes can support better public services, but do states that collect more tax really have richer governments? And what else decides how much money a state government has?"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\nYuting Xia’s personal website, with a biography, resume, and course blog."
+    "objectID": "blog/posts/post5/index.html#how-far-apart-are-state-tax-bills",
+    "href": "blog/posts/post5/index.html#how-far-apart-are-state-tax-bills",
+    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
+    "section": "How far apart are state tax bills?",
+    "text": "How far apart are state tax bills?\nI use the U.S. Census Bureau’s Annual Survey of State and Local Government Finances, combining state and local governments because states divide responsibilities differently. Taxes per person is their combined tax revenue divided by population, averaged over FY2022–2024. It measures collections per resident, not each resident’s tax bill.\n\nThe range is wide. DC collects $14,967 per resident, compared with under $5,000 in Tennessee, Alabama and Mississippi. Higher collections cluster in the Northeast, California and Hawaii; lower collections extend across much of the South and interior West. Adjacent low-tax states form a broad southern belt rather than isolated exceptions. The pattern suggests regional differences in tax bases and fiscal choices, although the map alone cannot separate their effects."
   },
   {
-    "objectID": "bio.html",
-    "href": "bio.html",
-    "title": "About Me",
-    "section": "",
-    "text": "I am Yuting Xia, a graduate student in Applied Economics and Data Science at the University of Pennsylvania. My experience includes securities research at Huatai, data analytics at Tencent, and AI product development at SDIC Cloud Network Technology. I work with Python, Stata, Java, SQL/MySQL, R, and Excel, and am interested in applying economics and data analysis to financial research."
+    "objectID": "blog/posts/post5/index.html#does-counting-all-revenue-close-the-gap",
+    "href": "blog/posts/post5/index.html#does-counting-all-revenue-close-the-gap",
+    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
+    "section": "Does counting all revenue close the gap?",
+    "text": "Does counting all revenue close the gap?\nTaxes are not a government’s only money. General revenue adds fees, tuition, interest, natural-resource royalties and federal transfers to taxes, excluding utility and pension-fund income. If these sources compensate low-tax states, the geographic gap should narrow.\n\nGeneral revenue ranges from $9,819 per person in Tennessee to $30,191 in DC. The gap barely narrows: the highest-to-lowest ratio remains 3.1, while the 90th-to-10th percentile ratio falls from 1.8 to 1.7.\nOn the map, the Southeast stays relatively light and the Northeast stays dark. The lower-revenue area stretches from Tennessee through Georgia and toward Florida, while California and Oregon remain comparatively well funded on the Pacific coast. Alaska, Wyoming and New Mexico stand out against this coastal pattern. Other income changes some states’ positions without erasing the broader regional divide. Darker colors everywhere partly reflect adding revenue sources; they do not by themselves show convergence.\n\nThe bars show why the gap persists: the ten highest-tax jurisdictions receive about $4,990 per person in federal transfers, versus $3,470 for the ten lowest. Federal transfers therefore do not offset the difference between these groups. This comparison describes funding patterns, not the causal effect of federal aid.\nAlaska, Wyoming and New Mexico reach the top five in total revenue despite lower tax rankings. Their larger non-tax revenues raise another question: who actually pays the taxes they collect?"
   },
   {
-    "objectID": "bio.html#education",
-    "href": "bio.html#education",
-    "title": "About Me",
-    "section": "Education",
-    "text": "Education\nUniversity of Pennsylvania\nM.S. in Applied Economics and Data Science · Expected December 2027\nCentral University of Finance and Economics\nB.A. in Economics (Mathematical Economics and Mathematical Finance) · June 2026\nUniversity of California, Berkeley\nExchange student · August–December 2025"
+    "objectID": "blog/posts/post5/index.html#who-actually-pays-the-taxes",
+    "href": "blog/posts/post5/index.html#who-actually-pays-the-taxes",
+    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
+    "section": "Who actually pays the taxes?",
+    "text": "Who actually pays the taxes?\nTaxes can fall on nonresidents, including visitors and customers buying goods produced elsewhere. I approximate their share by comparing Tax Foundation estimates of residents’ taxes paid to their own state with Census collections per resident in 2022. A 50% share means outsiders bear about half.\n\n\nConnecticut’s −2% reflects differences between calendar-year estimates and fiscal-year collections, not an actual negative nonresident share.\n\nThe strongest nonresident shares lie in Alaska and a set of interior states: North Dakota, Wyoming and New Mexico. This is not a uniform western pattern: neighboring Idaho and Utah are blue, while Nevada is warmer. California and much of the Northeast also remain blue despite their relatively high tax collections. DC is a localized exception on the eastern seaboard. The geography of who pays differs from the geography of how much governments collect. Resource production offers one explanation for the interior hotspots; tourism and commuting offer others for Nevada and DC."
   },
   {
-    "objectID": "bio.html#interests",
-    "href": "bio.html#interests",
-    "title": "About Me",
-    "section": "Interests",
-    "text": "Interests\n\nEconometrics and financial research\nMachine learning and data analysis\nHuman–AI collaboration"
-  },
-  {
-    "objectID": "bio.html#contact",
-    "href": "bio.html#contact",
-    "title": "About Me",
-    "section": "Contact",
-    "text": "Contact\njinmao@sas.upenn.edu"
-  },
-  {
-    "objectID": "blog/posts/post1/Untitled.html",
-    "href": "blog/posts/post1/Untitled.html",
-    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
-    "section": "",
-    "text": "“I’ve already put so much into this. I can’t stop now.”\nWe say it about a disappointing purchase, an unfinished project, or an investment that has gone wrong. Continuing seems to respect the money and effort already spent. Yet economics asks a surprisingly difficult question: if those resources cannot be recovered, why should they determine what we do next?"
-  },
-  {
-    "objectID": "blog/posts/post1/Untitled.html#what-is-a-sunk-cost",
-    "href": "blog/posts/post1/Untitled.html#what-is-a-sunk-cost",
-    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
-    "section": "What is a sunk cost?",
-    "text": "What is a sunk cost?\nA sunk cost is a cost already incurred that cannot be recovered through the choices now available. It can involve money, time, or effort. The defining feature is irreversibility, not how large or painful the cost feels.\nYou have paid for a nonrefundable ticket, but halfway through, you realize you dislike the film. Whether you stay or leave, the ticket payment is gone. What you can still choose is how to spend the rest of the evening.\nStaying cannot recover the payment. If another activity would be more enjoyable, staying only sacrifices more time. That forgone alternative is an opportunity cost: the value of the best option you give up. For more on this example, see OpenStax’s discussion of sunk costs.\n\n\n\nThe ticket is nonrefundable: staying or leaving cannot recover the $20. What remains yours to choose is the next hour."
-  },
-  {
-    "objectID": "blog/posts/post1/Untitled.html#why-does-ignoring-it-feel-wrong",
-    "href": "blog/posts/post1/Untitled.html#why-does-ignoring-it-feel-wrong",
-    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
-    "section": "Why does ignoring it feel wrong?",
-    "text": "Why does ignoring it feel wrong?\nWe are taught to avoid waste and reward persistence. Leaving the cinema, abandoning a project, or changing direction can feel like admitting that our earlier judgment was wrong. Continuing lets us hope the original effort will eventually be justified.\nThe confusion is between two questions: “Was my original decision worthwhile?” and “Which choice is better now?” The first evaluates the past; the second guides the future. A bad answer to the first does not automatically make continuing the best answer to the second.\nThe sunk cost fallacy occurs when an unrecoverable past investment pushes us to continue even though the remaining benefits do not justify the remaining costs. Sunk costs themselves are ordinary; the fallacy is allowing them to distort the next decision.\n\n\n\nPast spending is the same under either choice. Compare the consequences that today’s decision can still change."
-  },
-  {
-    "objectID": "blog/posts/post1/Untitled.html#three-common-misunderstandings",
-    "href": "blog/posts/post1/Untitled.html#three-common-misunderstandings",
-    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
-    "section": "Three common misunderstandings",
-    "text": "Three common misunderstandings\n“Everything I have already paid is sunk.” Not necessarily. A refundable deposit can still be recovered. Equipment may have resale value. Those recoverable amounts matter because today’s choice determines whether you receive them. What matters is recoverability, rather than simply whether payment happened earlier.\n“Ignoring sunk costs means giving up.” No. Suppose finishing a project costs another $40 and produces $70 of benefits. Continuing adds $30 of value, regardless of the unrecoverable amount already spent. If the benefit were only $30, continuing would instead lose another $10. Assume stopping has no further payoff and these figures include all relevant future consequences.\n“The past no longer matters.” Past experience can reveal whether a plan works, and previous spending affects the resources you still have. Use that information. Also include future exit penalties, switching costs, and the value of alternatives. Ignoring sunk costs means excluding an irreversible cost from the comparison, not erasing history or ignoring constraints."
-  },
-  {
-    "objectID": "blog/posts/post1/Untitled.html#one-example-waiting-for-a-stock-to-recover",
-    "href": "blog/posts/post1/Untitled.html#one-example-waiting-for-a-stock-to-recover",
-    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
-    "section": "One example: waiting for a stock to recover",
-    "text": "One example: waiting for a stock to recover\nAn investor buys a share for $100; it is now worth $60. “I’ll sell when I break even” makes the purchase price a target, but does not explain why holding is attractive today.\nThe share still has $60 of sale value, so the asset is not entirely sunk. Holding means choosing to keep that $60 invested. The decision should compare future prospects, risk, alternatives, and relevant costs. A price decline alone proves neither that selling nor holding is best.\n\n\n\n\n\n\nNoteOptional illustration: change the purchase price\n\n\n\n\n\nThis hypothetical example compares holding with selling for $60 and keeping cash for one year. It excludes dividends, interest, taxes, trading costs, and risk adjustment. Changing only the purchase price changes historical profit or loss, but not the expected advantage of holding over selling. Changing the expected future price can reverse that comparison.\n\n  A SMALL EXPERIMENTWould you keep the stock?\n  \n    Original purchase price $100\n    \n    You can sell the share for $60 today.\n    Expected price in one year $50\n    \n    Compare with $60 in cash. No dividends, interest, taxes, trading costs, or risk adjustment.\n  \n  \n    EXPECTED VALUE FROM TODAY\n    Selling is ahead by $10.\n    Hold: $50 expected wealth. Sell: $60 in cash.\n    Sell: result vs. purchase−$40Hold: expected result vs. purchase−$50\n  \n  At a $100 purchase price, $60 current value, and $50 expected future value, selling loses $40 relative to purchase; holding loses $50 in expectation. Changing only the purchase price never changes the $10 expected advantage of selling. Enable JavaScript to adjust the sliders."
-  },
-  {
-    "objectID": "blog/posts/post1/Untitled.html#why-this-matters-outside-investing",
-    "href": "blog/posts/post1/Untitled.html#why-this-matters-outside-investing",
-    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
-    "section": "Why this matters outside investing",
-    "text": "Why this matters outside investing\nThe same reasoning helps us reconsider a study method, a business project, or how we spend an evening. Hours already spent cannot be reclaimed, but the next hour can still be used well. Before continuing, identify what is unrecoverable, compare the remaining options, and include what each option requires you to give up.\nThe lesson is not to quit sooner. It is to choose the next step for what it can achieve. Past effort deserves reflection; future effort needs a reason.\n\nSource and illustration. Definition and movie example: OpenStax, Principles of Economics 3e, §2.1, “Sunk Costs” (read the section). Numerical examples and the interactive illustration are hypothetical, not market data. The movie comic was created with AI assistance to illustrate the same principle. Editable article and widget: blog/posts/post1/; illustrations: images/blog1/ in the website repository. Rendering instructions are in its README."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yuting Xia",
-    "section": "",
-    "text": "Yuting Xia\nUniversity of Pennsylvania\nWelcome to my personal website. I am pursuing an M.S. in Applied Economics and Data Science, with expected graduation in December 2027.\n\nQuick Links"
+    "objectID": "blog/posts/post5/index.html#what-the-map-tells-us",
+    "href": "blog/posts/post5/index.html#what-the-map-tells-us",
+    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
+    "section": "What the map tells us",
+    "text": "What the map tells us\nAcross the three maps, much of the Northeast combines high tax collections with high revenue, while parts of the Southeast remain lower on both. Alaska and selected interior states break this pattern, combining strong revenues with high estimated nonresident shares.\nHigher collections generally accompany better-funded governments, but local tax bills do not tell the whole story. Where a state sits—and the economic activities connected to that location—helps shape both its funding and who bears the cost. These maps reveal associations, not proof that geography causes fiscal outcomes.\nAmounts are nominal, without cost-of-living adjustments; nonresident shares combine modeled estimates and fiscal-year collections for one year.\n\nSources and replication. U.S. Census government finances, population estimates and state boundaries; Tax Foundation’s 2022 state-local tax burdens. Data, R scripts and replication instructions are in the GitHub repository and README."
   },
   {
     "objectID": "blog/posts/post3/index.html",
@@ -182,6 +133,125 @@
     "text": "What should a career chooser take away?\nTech and Finance workers in this full-time, full-year sample earn more at the median than the broad Other group, and the gap is already visible at ages 25–29. Tech leads Finance in the recent data and throughout the age profile. Their relative advantages are larger than in the 1970s, but the pattern is uneven. These group medians do not predict what any one person will earn.\n\nSource and replication. Flood et al., IPUMS CPS: Version 13.0, ASEC extract 1. See the full replication guide, README, and analysis repository for definitions, sample counts, code, and results. The authenticated CPS microdata are kept outside the public repository."
   },
   {
+    "objectID": "blog/posts/post1/Untitled.html",
+    "href": "blog/posts/post1/Untitled.html",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "",
+    "text": "“I’ve already put so much into this. I can’t stop now.”\nWe say it about a disappointing purchase, an unfinished project, or an investment that has gone wrong. Continuing seems to respect the money and effort already spent. Yet economics asks a surprisingly difficult question: if those resources cannot be recovered, why should they determine what we do next?"
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#what-is-a-sunk-cost",
+    "href": "blog/posts/post1/Untitled.html#what-is-a-sunk-cost",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "What is a sunk cost?",
+    "text": "What is a sunk cost?\nA sunk cost is a cost already incurred that cannot be recovered through the choices now available. It can involve money, time, or effort. The defining feature is irreversibility, not how large or painful the cost feels.\nYou have paid for a nonrefundable ticket, but halfway through, you realize you dislike the film. Whether you stay or leave, the ticket payment is gone. What you can still choose is how to spend the rest of the evening.\nStaying cannot recover the payment. If another activity would be more enjoyable, staying only sacrifices more time. That forgone alternative is an opportunity cost: the value of the best option you give up. For more on this example, see OpenStax’s discussion of sunk costs.\n\n\n\nThe ticket is nonrefundable: staying or leaving cannot recover the $20. What remains yours to choose is the next hour."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#why-does-ignoring-it-feel-wrong",
+    "href": "blog/posts/post1/Untitled.html#why-does-ignoring-it-feel-wrong",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "Why does ignoring it feel wrong?",
+    "text": "Why does ignoring it feel wrong?\nWe are taught to avoid waste and reward persistence. Leaving the cinema, abandoning a project, or changing direction can feel like admitting that our earlier judgment was wrong. Continuing lets us hope the original effort will eventually be justified.\nThe confusion is between two questions: “Was my original decision worthwhile?” and “Which choice is better now?” The first evaluates the past; the second guides the future. A bad answer to the first does not automatically make continuing the best answer to the second.\nThe sunk cost fallacy occurs when an unrecoverable past investment pushes us to continue even though the remaining benefits do not justify the remaining costs. Sunk costs themselves are ordinary; the fallacy is allowing them to distort the next decision.\n\n\n\nPast spending is the same under either choice. Compare the consequences that today’s decision can still change."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#three-common-misunderstandings",
+    "href": "blog/posts/post1/Untitled.html#three-common-misunderstandings",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "Three common misunderstandings",
+    "text": "Three common misunderstandings\n“Everything I have already paid is sunk.” Not necessarily. A refundable deposit can still be recovered. Equipment may have resale value. Those recoverable amounts matter because today’s choice determines whether you receive them. What matters is recoverability, rather than simply whether payment happened earlier.\n“Ignoring sunk costs means giving up.” No. Suppose finishing a project costs another $40 and produces $70 of benefits. Continuing adds $30 of value, regardless of the unrecoverable amount already spent. If the benefit were only $30, continuing would instead lose another $10. Assume stopping has no further payoff and these figures include all relevant future consequences.\n“The past no longer matters.” Past experience can reveal whether a plan works, and previous spending affects the resources you still have. Use that information. Also include future exit penalties, switching costs, and the value of alternatives. Ignoring sunk costs means excluding an irreversible cost from the comparison, not erasing history or ignoring constraints."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#one-example-waiting-for-a-stock-to-recover",
+    "href": "blog/posts/post1/Untitled.html#one-example-waiting-for-a-stock-to-recover",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "One example: waiting for a stock to recover",
+    "text": "One example: waiting for a stock to recover\nAn investor buys a share for $100; it is now worth $60. “I’ll sell when I break even” makes the purchase price a target, but does not explain why holding is attractive today.\nThe share still has $60 of sale value, so the asset is not entirely sunk. Holding means choosing to keep that $60 invested. The decision should compare future prospects, risk, alternatives, and relevant costs. A price decline alone proves neither that selling nor holding is best.\n\n\n\n\n\n\nNoteOptional illustration: change the purchase price\n\n\n\n\n\nThis hypothetical example compares holding with selling for $60 and keeping cash for one year. It excludes dividends, interest, taxes, trading costs, and risk adjustment. Changing only the purchase price changes historical profit or loss, but not the expected advantage of holding over selling. Changing the expected future price can reverse that comparison.\n\n  A SMALL EXPERIMENTWould you keep the stock?\n  \n    Original purchase price $100\n    \n    You can sell the share for $60 today.\n    Expected price in one year $50\n    \n    Compare with $60 in cash. No dividends, interest, taxes, trading costs, or risk adjustment.\n  \n  \n    EXPECTED VALUE FROM TODAY\n    Selling is ahead by $10.\n    Hold: $50 expected wealth. Sell: $60 in cash.\n    Sell: result vs. purchase−$40Hold: expected result vs. purchase−$50\n  \n  At a $100 purchase price, $60 current value, and $50 expected future value, selling loses $40 relative to purchase; holding loses $50 in expectation. Changing only the purchase price never changes the $10 expected advantage of selling. Enable JavaScript to adjust the sliders."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html#why-this-matters-outside-investing",
+    "href": "blog/posts/post1/Untitled.html#why-this-matters-outside-investing",
+    "title": "Sunk Costs: Why Past Effort Should Not Decide Your Next Step",
+    "section": "Why this matters outside investing",
+    "text": "Why this matters outside investing\nThe same reasoning helps us reconsider a study method, a business project, or how we spend an evening. Hours already spent cannot be reclaimed, but the next hour can still be used well. Before continuing, identify what is unrecoverable, compare the remaining options, and include what each option requires you to give up.\nThe lesson is not to quit sooner. It is to choose the next step for what it can achieve. Past effort deserves reflection; future effort needs a reason.\n\nSource and illustration. Definition and movie example: OpenStax, Principles of Economics 3e, §2.1, “Sunk Costs” (read the section). Numerical examples and the interactive illustration are hypothetical, not market data. The movie comic was created with AI assistance to illustrate the same principle. Editable article and widget: blog/posts/post1/; illustrations: images/blog1/ in the website repository. Rendering instructions are in its README."
+  },
+  {
+    "objectID": "bio.html",
+    "href": "bio.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am Yuting Xia, a graduate student in Applied Economics and Data Science at the University of Pennsylvania. My experience includes securities research at Huatai, data analytics at Tencent, and AI product development at SDIC Cloud Network Technology. I work with Python, Stata, Java, SQL/MySQL, R, and Excel, and am interested in applying economics and data analysis to financial research."
+  },
+  {
+    "objectID": "bio.html#education",
+    "href": "bio.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nUniversity of Pennsylvania\nM.S. in Applied Economics and Data Science · Expected December 2027\nCentral University of Finance and Economics\nB.A. in Economics (Mathematical Economics and Mathematical Finance) · June 2026\nUniversity of California, Berkeley\nExchange student · August–December 2025"
+  },
+  {
+    "objectID": "bio.html#interests",
+    "href": "bio.html#interests",
+    "title": "About Me",
+    "section": "Interests",
+    "text": "Interests\n\nEconometrics and financial research\nMachine learning and data analysis\nHuman–AI collaboration"
+  },
+  {
+    "objectID": "bio.html#contact",
+    "href": "bio.html#contact",
+    "title": "About Me",
+    "section": "Contact",
+    "text": "Contact\njinmao@sas.upenn.edu"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\nYuting Xia’s personal website, with a biography, resume, and course blog."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Closer to AI, Easier to Replace?\n\n\nDoes a closer connection to AI mean a greater risk of job replacement?\n\n\n\n\n\nOct 26, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nDoes the year change the parent–child income relationship?\n\n\nHow strongly is children’s income associated with their parents’ income—and does the answer depend on the year we measure?\n\n\n\n\n\nOct 22, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nLow Taxes, Deep Pockets? Who Funds Your State?\n\n\nDo states that collect more tax really have richer governments, and who actually pays the bill?\n\n\n\n\n\nOct 19, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nHigh Yields, Hot Currencies?\n\n\nDo higher government bond yields make a currency more attractive—or is the yield advantage over other countries what matters?\n\n\n\n\n\nOct 6, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nTech Dominates the Forbes Rich List. Do Tech and Finance Careers Really Pay More?\n\n\nA look at the typical worker’s earnings across occupations, ages, and fifty income years.\n\n\n\n\n\nSep 28, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nOne Policy, Two Mandates, Three Treasury Reactions\n\n\nCan Fed interest-rate policy balance inflation and employment, and do Treasury yields respond differently across maturities?\n\n\n\n\n\nSep 21, 2026\n\n\nYuting Xia\n\n\n\n\n\n\n\n\n\n\n\n\nSunk Costs: Why Past Effort Should Not Decide Your Next Step\n\n\nUnderstanding sunk costs, the mistakes we make about them, and how the idea helps with everyday decisions.\n\n\n\n\n\nSep 14, 2026\n\n\nYuting Xia\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/post2/index.html",
+    "href": "blog/posts/post2/index.html",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "",
+    "text": "Higher interest rates can restrain inflation but weaken hiring; comparing the Fed’s policy cycle with labor-market conditions and Treasury yields reveals both this balancing act and its transmission across maturities."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#from-public-pages-to-comparable-data",
+    "href": "blog/posts/post2/index.html#from-public-pages-to-comparable-data",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "From public pages to comparable data",
+    "text": "From public pages to comparable data\nI used rvest to extract yields from the U.S. Treasury, CPI and unemployment from the Bureau of Labor Statistics, and policy records from the Federal Reserve. Its key value is extracting dates and decision text from FOMC statements, allowing yield changes to be matched to the days policy news reaches markets.\nCPI inflation is the seasonally adjusted index’s twelve-month percentage change. Each yield’s announcement-day change is its difference from the previous trading observation, multiplied by 100 to convert percentage points into basis points. The sample contains 1,178 Treasury dates, 56 macro months, and 18 rate-change announcements, ending in September 2026 for yields and August for macro data."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#the-policy-path-and-the-dual-mandate",
+    "href": "blog/posts/post2/index.html#the-policy-path-and-the-dual-mandate",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "The policy path and the dual mandate",
+    "text": "The policy path and the dual mandate\nThe full schedule shows an unusually concentrated tightening phase, followed by a later easing cycle and the most recent increase.\n\n\n\n\nAnnouncement\nDecision\nChange (bp)\nNew target range (%)\n\n\n\n\nMar. 16, 2022\nHike\n+25\n0.25–0.50\n\n\nMay. 04, 2022\nHike\n+50\n0.75–1.00\n\n\nJun. 15, 2022\nHike\n+75\n1.50–1.75\n\n\nJul. 27, 2022\nHike\n+75\n2.25–2.50\n\n\nSep. 21, 2022\nHike\n+75\n3.00–3.25\n\n\nNov. 02, 2022\nHike\n+75\n3.75–4.00\n\n\nDec. 14, 2022\nHike\n+50\n4.25–4.50\n\n\nFeb. 01, 2023\nHike\n+25\n4.50–4.75\n\n\nMar. 22, 2023\nHike\n+25\n4.75–5.00\n\n\nMay. 03, 2023\nHike\n+25\n5.00–5.25\n\n\nJul. 26, 2023\nHike\n+25\n5.25–5.50\n\n\nSep. 18, 2024\nCut\n-50\n4.75–5.00\n\n\nNov. 07, 2024\nCut\n-25\n4.50–4.75\n\n\nDec. 18, 2024\nCut\n-25\n4.25–4.50\n\n\nSep. 17, 2025\nCut\n-25\n4.00–4.25\n\n\nOct. 29, 2025\nCut\n-25\n3.75–4.00\n\n\nDec. 10, 2025\nCut\n-25\n3.50–3.75\n\n\nSep. 16, 2026\nHike\n+25\n3.75–4.00\n\n\n\n\nFour milestones make the macroeconomic sequence easier to see. Monthly values refer to the observation month, and the policy rate is the target-range midpoint then in effect.\n\n\n\n\n\n\n\n\n\n\nMilestone\nMonth\nPolicy midpoint (%)\nCPI inflation (%)\nUnemployment (%)\n\n\n\n\nFirst hike\nMar. 2022\n0.38\n8.6\n3.7\n\n\nLast hike before easing\nJul. 2023\n5.38\n3.3\n3.5\n\n\nFirst cut\nSep. 2024\n4.88\n2.4\n4.1\n\n\nLatest macro data\nAug. 2026\n3.63\n3.4\n4.1\n\n\n\n\n\n\nPolicy tightened after inflation surged, while unemployment stayed low. October 2025 CPI and unemployment observations are missing because of a lapse in appropriations.\n\n\nThe observed policy cycle is consistent with progress toward balancing inflation and employment, but not a completed or permanent success. Inflation fell sharply without a large rise in unemployment, then rebounded. Four stages show how the balance changed:\n\nTightening, 2022–2023: the policy midpoint rose above 5%. Inflation fell from its 9.0% peak to 3.3% by October 2023, while unemployment was 3.9%, close to its 4.0% starting level.\nHolding high rates, 2023–2024: by August 2024, inflation had fallen to 2.6%, while unemployment reached 4.2%. Further disinflation coincided with a softer labor market.\nEasing, 2024–2025: inflation generally stayed around 2.5–3%, while unemployment reached 4.4% in September 2025. The shift toward cuts was consistent with greater concern about employment.\nRenewed tightening, 2026: inflation reached 4.2% in May and eased to 3.4% in August, with unemployment at 4.1%. Renewed price pressure provides context for September’s hike; its macroeconomic effects are outside this sample.\n\nThese patterns cannot isolate policy’s causal contribution. CPI tracks price pressure here; the Fed’s formal inflation goal uses PCE prices."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#three-maturities-one-policy-cycle",
+    "href": "blog/posts/post2/index.html#three-maturities-one-policy-cycle",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "Three maturities, one policy cycle",
+    "text": "Three maturities, one policy cycle\nThe yield summary compares January 3, 2022 with September 18, 2026; peaks are sample highs.\n\n\n\nMaturity\nStart (%)\nSample peak (%)\nPeak date\nLatest (%)\n\n\n\n\n2-year\n0.78\n5.19\nOct. 17, 2023\n4.76\n\n\n10-year\n1.63\n5.01\nSep. 16, 2026\n5.01\n\n\n30-year\n2.01\n5.37\nSep. 10, 2026\n5.34\n\n\n\n\n\n\nDaily 2-year, 10-year, and 30-year Treasury yields with Fed rate-change announcements.\n\n\nTreasury yields did not move uniformly across maturities: the short end reversed more visibly with the policy cycle, while long yields remained elevated. The 2-year yield peaked at 5.19% in 2023, above longer maturities. By October 2024, the 30-year again exceeded the 10-year and 2-year. During 2025, the 30-minus-2-year gap widened from 0.61 percentage points in January to 1.07 in October as shorter yields fell more. By September 2026, 10- and 30-year yields were still 5.01% and 5.34%, showing that earlier cuts had not ensured lasting relief in long-term financing costs.\nThe announcement-day distribution makes that maturity contrast more direct.\n\n\n\n\n\n\n\n\n\n\nMaturity\nMeetings\nMean absolute move (bp)\nMedian absolute move (bp)\nMaximum absolute move (bp)\n\n\n\n\n2-year\n18\n8.7\n7.0\n25\n\n\n10-year\n18\n6.4\n5.0\n16\n\n\n30-year\n18\n3.9\n2.5\n10\n\n\n\n\n\n\nAbsolute announcement-day Treasury yield changes by maturity.\n\n\nAnnouncement-day movements were larger at shorter maturities: median absolute changes were 7.0, 5.0, and 2.5 basis points for 2-, 10-, and 30-year yields. The 2-year yield is more closely tied to near-term policy expectations; longer yields also incorporate distant rates and compensation for long-term risk. This provides an interpretation of the maturity pattern, not proof that each announced decision caused the daily move. The sample includes only rate-changing meetings, and daily changes also contain other news."
+  },
+  {
+    "objectID": "blog/posts/post2/index.html#so-did-the-fed-pull-it-off",
+    "href": "blog/posts/post2/index.html#so-did-the-fed-pull-it-off",
+    "title": "One Policy, Two Mandates, Three Treasury Reactions",
+    "section": "So, did the Fed pull it off?",
+    "text": "So, did the Fed pull it off?\nThe evidence suggests progress in balancing inflation and employment, alongside stronger announcement-day yield movements at shorter maturities. Inflation’s rebound shows why that balance requires reassessment rather than declaring victory after disinflation. For investors, the practical implication is to distinguish near-term yield sensitivity from long-bond price risk: smaller yield moves do not necessarily mean smaller price losses, because longer-duration bonds are more sensitive to a given yield change. For borrowers, a Fed cut alone is insufficient evidence that long-term financing has become cheaper; the relevant maturity’s market yield still matters.\n\nSources and reproducibility. U.S. Treasury daily par yields; Federal Reserve target-rate history, FOMC calendar, and policy statements; U.S. Bureau of Labor Statistics CPI and unemployment tables. See the README, and the analysis repository. The analysis uses saved public-page snapshots and records source URLs and file fingerprints in the analysis repository’s results/ folder."
+  },
+  {
     "objectID": "blog/posts/post4/index.html",
     "href": "blog/posts/post4/index.html",
     "title": "High Yields, Hot Currencies?",
@@ -215,41 +285,6 @@
     "title": "High Yields, Hot Currencies?",
     "section": "What is the answer for investors?",
     "text": "What is the answer for investors?\nMore attractive domestic yields do not consistently accompany stronger currencies; the yield advantage abroad helps explain some country patterns, but supplies no universal rule. Domestic yield changes align weakly with appreciation in the US and Canada, while Japan and Britain show negative relationships. Relative yields reveal positive relationships in Japan, Canada, and Switzerland, yet Britain remains negative. Each country has its own pattern. Investors should therefore consider not only higher yields but also potential losses from exchange-rate movements and the costs of currency conversion or hedging.\nThese contemporaneous associations do not establish that yields caused capital inflows. Inflation expectations, policy surprises, risk premia, and hedging also matter.\n\nSources and replication. Data come from OECD Financial Market and BIS exchange-rate datasets. The R scripts for downloading, cleaning, and plotting the data, together with the archived data and replication instructions, are available in the GitHub repository. See the README to reproduce the figures and results."
-  },
-  {
-    "objectID": "blog/posts/post5/index.html",
-    "href": "blog/posts/post5/index.html",
-    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
-    "section": "",
-    "text": "Taxes vary widely across U.S. states and matter when choosing where to live. Higher taxes can support better public services, but do states that collect more tax really have richer governments? And what else decides how much money a state government has?"
-  },
-  {
-    "objectID": "blog/posts/post5/index.html#how-far-apart-are-state-tax-bills",
-    "href": "blog/posts/post5/index.html#how-far-apart-are-state-tax-bills",
-    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
-    "section": "How far apart are state tax bills?",
-    "text": "How far apart are state tax bills?\nI use the U.S. Census Bureau’s Annual Survey of State and Local Government Finances, combining state and local governments because states divide responsibilities differently. Taxes per person is their combined tax revenue divided by population, averaged over FY2022–2024. It measures collections per resident, not each resident’s tax bill.\n\nThe range is wide. DC collects $14,967 per resident, compared with under $5,000 in Tennessee, Alabama and Mississippi. Higher collections cluster in the Northeast, California and Hawaii; lower collections extend across much of the South and interior West. Adjacent low-tax states form a broad southern belt rather than isolated exceptions. The pattern suggests regional differences in tax bases and fiscal choices, although the map alone cannot separate their effects."
-  },
-  {
-    "objectID": "blog/posts/post5/index.html#does-counting-all-revenue-close-the-gap",
-    "href": "blog/posts/post5/index.html#does-counting-all-revenue-close-the-gap",
-    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
-    "section": "Does counting all revenue close the gap?",
-    "text": "Does counting all revenue close the gap?\nTaxes are not a government’s only money. General revenue adds fees, tuition, interest, natural-resource royalties and federal transfers to taxes, excluding utility and pension-fund income. If these sources compensate low-tax states, the geographic gap should narrow.\n\nGeneral revenue ranges from $9,819 per person in Tennessee to $30,191 in DC. The gap barely narrows: the highest-to-lowest ratio remains 3.1, while the 90th-to-10th percentile ratio falls from 1.8 to 1.7.\nOn the map, the Southeast stays relatively light and the Northeast stays dark. The lower-revenue area stretches from Tennessee through Georgia and toward Florida, while California and Oregon remain comparatively well funded on the Pacific coast. Alaska, Wyoming and New Mexico stand out against this coastal pattern. Other income changes some states’ positions without erasing the broader regional divide. Darker colors everywhere partly reflect adding revenue sources; they do not by themselves show convergence.\n\nThe bars show why the gap persists: the ten highest-tax jurisdictions receive about $4,990 per person in federal transfers, versus $3,470 for the ten lowest. Federal transfers therefore do not offset the difference between these groups. This comparison describes funding patterns, not the causal effect of federal aid.\nAlaska, Wyoming and New Mexico reach the top five in total revenue despite lower tax rankings. Their larger non-tax revenues raise another question: who actually pays the taxes they collect?"
-  },
-  {
-    "objectID": "blog/posts/post5/index.html#who-actually-pays-the-taxes",
-    "href": "blog/posts/post5/index.html#who-actually-pays-the-taxes",
-    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
-    "section": "Who actually pays the taxes?",
-    "text": "Who actually pays the taxes?\nTaxes can fall on nonresidents, including visitors and customers buying goods produced elsewhere. I approximate their share by comparing Tax Foundation estimates of residents’ taxes paid to their own state with Census collections per resident in 2022. A 50% share means outsiders bear about half.\n\n\nConnecticut’s −2% reflects differences between calendar-year estimates and fiscal-year collections, not an actual negative nonresident share.\n\nThe strongest nonresident shares lie in Alaska and a set of interior states: North Dakota, Wyoming and New Mexico. This is not a uniform western pattern: neighboring Idaho and Utah are blue, while Nevada is warmer. California and much of the Northeast also remain blue despite their relatively high tax collections. DC is a localized exception on the eastern seaboard. The geography of who pays differs from the geography of how much governments collect. Resource production offers one explanation for the interior hotspots; tourism and commuting offer others for Nevada and DC."
-  },
-  {
-    "objectID": "blog/posts/post5/index.html#what-the-map-tells-us",
-    "href": "blog/posts/post5/index.html#what-the-map-tells-us",
-    "title": "Low Taxes, Deep Pockets? Who Funds Your State?",
-    "section": "What the map tells us",
-    "text": "What the map tells us\nAcross the three maps, much of the Northeast combines high tax collections with high revenue, while parts of the Southeast remain lower on both. Alaska and selected interior states break this pattern, combining strong revenues with high estimated nonresident shares.\nHigher collections generally accompany better-funded governments, but local tax bills do not tell the whole story. Where a state sits—and the economic activities connected to that location—helps shape both its funding and who bears the cost. These maps reveal associations, not proof that geography causes fiscal outcomes.\nAmounts are nominal, without cost-of-living adjustments; nonresident shares combine modeled estimates and fiscal-year collections for one year.\n\nSources and replication. U.S. Census government finances, population estimates and state boundaries; Tax Foundation’s 2022 state-local tax burdens. Data, R scripts and replication instructions are in the GitHub repository and README."
   },
   {
     "objectID": "blog/posts/post6/index.html",
@@ -294,59 +329,10 @@
     "text": "Takeaway\nHigher parental earnings are associated with higher child earnings. Using averaged income, the IGE of 0.117 means that 1% higher parental earnings are associated with approximately 0.117% higher child earnings. Averaged income can better reflect long-run earnings than single-year income by spanning career stages and reducing dependence on earnings at one age. The rank coefficient of 0.238 means that a ten-percentile-point parental earnings advantage is associated with a 2.38-percentile-point advantage in child earnings.\n\nSources and replication. PSID supplies the data; the project README documents variable definitions, data access, and how to reproduce the analysis."
   },
   {
-    "objectID": "blog/posts/post7/index.html",
-    "href": "blog/posts/post7/index.html",
-    "title": "Closer to AI, Easier to Replace?",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yuting Xia",
     "section": "",
-    "text": "If AI can perform more of a job’s tasks, it seems natural to expect fewer workers to be needed. Yet AI might also help workers produce more, making their skills more valuable. So this article explores whether a job’s closer connection to AI means a greater risk of replacement."
-  },
-  {
-    "objectID": "blog/posts/post7/index.html#how-do-we-measure-the-connection-to-ai",
-    "href": "blog/posts/post7/index.html#how-do-we-measure-the-connection-to-ai",
-    "title": "Closer to AI, Easier to Replace?",
-    "section": "How do we measure the connection to AI?",
-    "text": "How do we measure the connection to AI?\nAnthropic’s Economic Index maps observed Claude usage to work tasks and occupations. The BLS Employment Projections database provides U.S. employment by occupation in 2024 and projected employment in 2034. Python joins them using Standard Occupational Classification (SOC) codes; an occupation such as accounting can span many industries.\nAI exposure summarizes observed AI use across occupational tasks, accounting for factors such as task time and usage patterns. Task breadth is the share of matched tasks with positive AI penetration, counting each task equally. Neither measures the probability that a worker will lose their job.\nThe matched sample contains 722 occupations, retaining those with at least 95% task matching against O*NET 30.0 task descriptions. The vertical axis measures projected employment growth. It provides an employment outlook, not an observed AI replacement rate.\n\n\n\n\nExplore: hover for employment and sample coverage; click a group to see its occupations. Search for one occupation to isolate it, then clear the search to restore the group. Switch the horizontal axis to compare exposure with task breadth.\nGroup exposure and breadth use 2024 employment weights. Bubble area represents sample employment; group growth uses summed employment. Hover shows sample coverage relative to the official group. Detailed dots are equal-sized so smaller occupations remain visible."
-  },
-  {
-    "objectID": "blog/posts/post7/index.html#do-similarly-exposed-groups-have-similar-outlooks",
-    "href": "blog/posts/post7/index.html#do-similarly-exposed-groups-have-similar-outlooks",
-    "title": "Closer to AI, Easier to Replace?",
-    "section": "Do similarly exposed groups have similar outlooks?",
-    "text": "Do similarly exposed groups have similar outlooks?\nComparable AI exposure can coexist with opposite employment projections. Select the occupational-group view above. Business and financial occupations have employment-weighted exposure of 28.8% and projected growth of 5.2%; sales has similar exposure, 27.5%, but projected growth of −2.6%. Computer and mathematical occupations combine 35.3% exposure with 10.0% growth, while office and administrative support has 33.9% exposure and −3.9% growth."
-  },
-  {
-    "objectID": "blog/posts/post7/index.html#what-do-the-averages-hide",
-    "href": "blog/posts/post7/index.html#what-do-the-averages-hide",
-    "title": "Closer to AI, Easier to Replace?",
-    "section": "What do the averages hide?",
-    "text": "What do the averages hide?\nThe group pattern does not apply to every occupation. Click into sales: 10 of its 19 matched occupations are projected to grow. Nevertheless, declining occupations account for 67% of its sample employment. Counting occupations and counting workers therefore tell different stories.\nSearch for Software developers: exposure is 28.8%, with projected growth of 15.8%. Compare Retail salespersons, at 32.2% exposure and −0.5% growth, and Insurance sales agents, at 31.9% exposure and +3.7% growth. Even within sales, similar exposure does not imply the same outlook. Conversely, Computer programmers have 74.5% exposure and projected growth of −6.0%."
-  },
-  {
-    "objectID": "blog/posts/post7/index.html#how-might-we-explain-the-difference",
-    "href": "blog/posts/post7/index.html#how-might-we-explain-the-difference",
-    "title": "Closer to AI, Easier to Replace?",
-    "section": "How might we explain the difference?",
-    "text": "How might we explain the difference?\nAI may complement professional skills while replacing routine tasks. This offers one possible explanation for the contrast between office support and computer/math occupations. Automating repetitive clerical tasks, such as data entry and document processing, could reduce demand for some office-support roles. Meanwhile, wider AI adoption could increase demand for workers who develop software, integrate AI systems, and evaluate their outputs. AI could also help these workers spend more time on design and complex problem-solving. Both groups contain varied tasks and skill requirements; the chart is consistent with this explanation, but does not establish that AI causes either projection.\nDemand may offset labor savings: cheaper software or advice could attract more customers, supporting employment despite lower labor requirements per service. Trust, accountability, and unusual cases may preserve human roles, while adoption costs delay substitution. These mechanisms could explain divergent outlooks, but these chart comparisons do not establish them; BLS projections incorporate forces beyond AI."
-  },
-  {
-    "objectID": "blog/posts/post7/index.html#takeaway",
-    "href": "blog/posts/post7/index.html#takeaway",
-    "title": "Closer to AI, Easier to Replace?",
-    "section": "Takeaway",
-    "text": "Takeaway\nA closer connection to AI does not consistently coincide with a weaker employment outlook. Business/finance and computer/math are projected to expand, while similarly exposed sales and office-support groups contract; switching to task breadth preserves this contrast. AI may save labor on some tasks while complementing skills or expanding demand elsewhere, so exposure need not translate directly into falling employment. For our own skill development and career choices, how AI penetrates specific tasks may matter more than whether a job is simply labeled “AI-exposed.” It is worth learning to use AI while strengthening judgment and interpersonal skills; exposure alone is not a reason to avoid an occupation.\n\nSources and replication. Anthropic supplies occupational exposure and task penetration; BLS supplies the archived 2024–2034 projections; O*NET supplies task descriptions. GitHub replication repository and downloadable files, including the source data, Python scripts, results, and README. All comparisons are descriptive and use the matched sample."
-  },
-  {
-    "objectID": "blog/posts/post7/index.html#does-broader-task-coverage-mean-greater-risk",
-    "href": "blog/posts/post7/index.html#does-broader-task-coverage-mean-greater-risk",
-    "title": "Closer to AI, Easier to Replace?",
-    "section": "Does broader task coverage mean greater risk?",
-    "text": "Does broader task coverage mean greater risk?\nThe task-breadth view shows the same contrast: broad coverage can coexist with growth or decline. Switch the horizontal axis to task breadth. Business/finance and office support have nearly identical coverage, at 24.2% and 25.1%, but their growth projections remain +5.2% and −3.9%. Sales has somewhat narrower coverage (22.2%) and still declines, while computer/math has the broadest coverage of these four groups (34.1%) and the strongest growth (+10.0%).\nFor these groups, counting how widely AI appears across tasks does not resolve the difference in employment outlooks. Breadth counts tasks equally, regardless of their time requirements or importance, and does not distinguish assistance from replacement. Clicking a group and inspecting an occupation’s task panel helps readers see what lies behind its average, rather than treating all covered tasks as equivalent."
-  },
-  {
-    "objectID": "blog/posts/post7/index.html#does-closer-ai-exposure-mean-more-replacement",
-    "href": "blog/posts/post7/index.html#does-closer-ai-exposure-mean-more-replacement",
-    "title": "Closer to AI, Easier to Replace?",
-    "section": "Does closer AI exposure mean more replacement?",
-    "text": "Does closer AI exposure mean more replacement?\nSimilar AI exposure can accompany very different employment outlooks. In the group view, compare business and financial operations with sales: their exposure is almost the same, at 28.8% and 27.5%, yet projected employment grows 5.2% in business/finance and falls 2.6% in sales. Their bubbles sit close together horizontally but on opposite sides of zero growth.\nComputer and mathematical occupations provide a second comparison. Their exposure is 35.3%, slightly higher than the 33.9% for office and administrative support. Yet computer/math employment is projected to grow 10.0%, while office support declines 3.9%. The more exposed group has the stronger outlook, which challenges the simple expectation that closer contact with AI necessarily means fewer jobs.\nThese are comparisons of the matched occupations within each group, not every job in the economy. They show why exposure alone is insufficient to judge an occupation’s outlook. They cannot tell us how much employment would grow without AI, or how many workers AI might replace within a growing group."
+    "text": "A little curiosity. A little boo.Happy Halloween — welcome to my corner of the web.\n\n\n\n\n\n\n\n\nYuting Xia\nUniversity of Pennsylvania\nWelcome to my personal website. I am pursuing an M.S. in Applied Economics and Data Science, with expected graduation in December 2027.\n\nQuick Links"
   }
 ]

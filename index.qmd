@@ -2,6 +2,11 @@
 title: ""
 ---
 
+<div class="halloween-note">
+  <img src="images/halloween/ghost.svg" alt="" aria-hidden="true">
+  <p><strong>A little curiosity. A little boo.</strong><span>Happy Halloween — welcome to my corner of the web.</span></p>
+</div>
+
 ::::: columns
 ::: {.column width="35%"}
 ![](images/profile-yuting.jpg){width="100%" fig-alt="Yuting Xia’s chosen avatar"}
