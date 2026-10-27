@@ -15,9 +15,8 @@ h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spac
 .quarto-listing-default .quarto-post{border-color:var(--line)}.quarto-post .listing-title{font-family:Georgia,'Times New Roman',serif;font-weight:400}
 .quarto-post .thumbnail img{background:#f5f0e7;border-radius:2px}
 .nav-footer{background:#eee7d9;border-top:1px solid #d6c7b1;color:#756555}
-.autumn-vignette{margin:0 0 2.5rem;border-bottom:1px solid #d8c9b1;padding-bottom:1.2rem}
-.autumn-vignette img{display:block;width:100%;max-height:245px;object-fit:contain;mix-blend-mode:multiply}
-.autumn-vignette figcaption{text-align:right;font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#876849;font-size:.8rem;letter-spacing:.03em;margin-top:.5rem}
+.autumn-accent{width:200px;max-width:90%;margin:1.8rem auto 0;pointer-events:none}
+.autumn-accent img{display:block;width:100%;height:auto;border:0!important;background:transparent!important;box-shadow:none!important;outline:none!important}
 .sidebar nav[role=doc-toc] ul>li>a.active{border-left-color:#9a6545;color:#79543b!important}
-@media(max-width:767px){.navbar{padding:.8rem}.autumn-vignette{margin-bottom:1.6rem;padding-bottom:.7rem}.autumn-vignette img{max-height:180px}.autumn-vignette figcaption{font-size:.75rem}.navbar-brand{font-size:1.2rem}}
-@media print{html,body{background:white;box-shadow:none}.autumn-vignette{display:none}}
+@media(max-width:767px){.navbar{padding:.8rem}.autumn-accent{width:145px;margin-top:1rem}.navbar-brand{font-size:1.2rem}}
+@media print{html,body{background:white;box-shadow:none}.autumn-accent{display:none}}
