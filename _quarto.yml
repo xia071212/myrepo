@@ -23,12 +23,13 @@ website:
     left: |
       ![](/images/UniversityofPennsylvania_FullLogo_RGB.png){width=100px}
     right: |
-      ![](/images/halloween/golden-autumn-accent.png){width=75px fig-alt=""}
+      <span class="seasonal-footer" aria-hidden="true"></span>
 
 format:
   html:
     theme: flatly
-    css: [styles.css, autumn-2026-v2.css]
+    css: [styles.css, autumn-2026-v3.css]
+    include-after-body: seasonal-decor.html
     toc: false
     lang: en
     html-math-method: mathml

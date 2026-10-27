@@ -1,0 +1,9 @@
+<script>
+// Small, varied seasonal ornaments; the retriever appears only in the navbar.
+document.addEventListener("DOMContentLoaded", () => {
+  const ornament = document.querySelector('.seasonal-footer');
+  if (!ornament) return;
+  const path = window.location.pathname;
+  ornament.dataset.motif = /\/blog\/|\/bio\.html$/.test(path) ? 'books' : 'pumpkin';
+});
+</script>

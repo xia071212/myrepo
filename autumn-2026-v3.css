@@ -18,7 +18,8 @@ h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spac
 .navbar-brand{display:flex;align-items:center;gap:10px}
 .navbar-brand::before{content:none!important;display:none!important}
 .navbar-logo{width:76px!important;height:48px!important;max-height:48px!important;object-fit:contain}
-.nav-footer-right img{display:block;width:75px;height:50px;object-fit:contain}
+.seasonal-footer{display:block;width:70px;height:60px;background:url("images/halloween/pumpkin-leaves.png") center/contain no-repeat}
+.seasonal-footer[data-motif="books"]{background-image:url("images/halloween/witch-books.png")}
 .sidebar nav[role=doc-toc] ul>li>a.active{border-left-color:#9a6545;color:#79543b!important}
 @media(max-width:767px){.navbar{padding:.8rem}.navbar-logo{width:58px!important;height:38px!important;max-height:38px!important}.navbar-brand{gap:6px}.navbar-brand{font-size:1.2rem}}
-@media print{html,body{background:white;box-shadow:none}.navbar-logo,.nav-footer-right img{display:none}}
+@media print{html,body{background:white;box-shadow:none}.navbar-logo,.seasonal-footer{display:none}}

@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="autumn-2026-v2.css">
+<link rel="stylesheet" href="autumn-2026-v3.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -155,6 +155,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+// Small, varied seasonal ornaments; the retriever appears only in the navbar.
+document.addEventListener("DOMContentLoaded", () => {
+  const ornament = document.querySelector('.seasonal-footer');
+  if (!ornament) return;
+  const path = window.location.pathname;
+  ornament.dataset.motif = /\/blog\/|\/bio\.html$/.test(path) ? 'books' : 'pumpkin';
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -565,7 +574,7 @@ ul.task-list li input[type="checkbox"] {
 <p>© 2026 Yuting Xia</p>
 </div>
     <div class="nav-footer-right">
-<p><img src="./images/halloween/golden-autumn-accent.png" class="img-fluid" alt="" width="75"></p>
+<p><span class="seasonal-footer" aria-hidden="true"></span></p>
 </div>
   </div>
 </footer>
