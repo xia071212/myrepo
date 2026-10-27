@@ -1,27 +1,23 @@
-/* Seasonal decoration only: article content and analytical graphics stay intact. */
-:root{--paper:#fffaf1;--ink:#382d3d;--muted:#756773;--blue:#f7e6ce;--pink:#f5d7be;--line:#e5d5c4;--link:#795036;--pumpkin:#efac66;--lavender:#e5dcf0}
-html{background-color:#f2e8da;background-image:radial-gradient(#cdbda9 .7px,transparent .7px);background-size:9px 9px}
-body{background:var(--paper);box-shadow:0 0 0 1px #e5d5c4;min-height:100vh}
-a:hover{color:#a14e21}a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#965b32}
-h1,h2,h3{font-weight:650;letter-spacing:-.015em}h1.title{line-height:1.25}
-.navbar{background:var(--paper)!important;border-bottom:2px solid var(--ink);box-shadow:0 4px 0 var(--pumpkin)}
-.navbar-brand{font-weight:750;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
-.navbar-brand::before{content:"";width:39px;height:42px;background:url('images/halloween/ghost.svg') center/contain no-repeat;flex-shrink:0}
-.navbar-nav .nav-link{border:1.5px solid transparent;border-radius:9px!important;color:var(--ink)!important;font-weight:550}
-.navbar-nav .nav-link.active{background:var(--pumpkin);border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
-.navbar-nav .nav-link:hover{background:#f5e8d5}
-.navbar-toggler{border:1.5px solid var(--ink);border-radius:8px}
-#quarto-search .aa-SubmitIcon{fill:var(--ink)}
-.quarto-category{background:var(--lavender)!important;border:1px solid #a895b4!important;border-radius:6px!important;color:#594665!important}
-.columns>.column:first-child img{border:7px solid #f8dfba;border-radius:22px;outline:2px solid var(--ink);box-shadow:6px 6px 0 var(--pumpkin)}
-.quick-links a,.unavailable-link{border-radius:10px}.quick-links a{background:#f7ead6;border:1.5px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
-.quick-links a:hover{background:var(--pumpkin);transform:translateY(-2px)}
-.quarto-listing-default .quarto-post{border-bottom:1px dashed #c4ae98}.quarto-post .listing-title{font-weight:650}
-.quarto-post .thumbnail img{background:#fff8ed;border-radius:12px;border:1px solid var(--line)}
-.nav-footer{background:#f7e6ce;border-top:2px solid var(--ink);color:#62515f}
-.nav-footer-center::after{content:"A little spooky. A lot curious.";display:block;font-size:.72rem;letter-spacing:.035em;color:#775039}
-.halloween-note{display:flex;align-items:center;gap:18px;margin:0 0 2.2rem;padding:16px 22px;border:2px solid var(--ink);border-radius:18px 18px 18px 4px;background:#f9e1bc;box-shadow:4px 4px 0 var(--ink);max-width:580px;position:relative}
-.halloween-note img{width:66px;height:66px;flex-shrink:0}.halloween-note p{margin:0;line-height:1.5}.halloween-note strong{display:block;font-size:1.2rem;font-weight:750}.halloween-note span{font-size:.88rem;color:#6f523d}.halloween-note::after{content:"✦";position:absolute;right:16px;top:8px;color:#9b592c;font-size:20px}
-@media(max-width:767px){.navbar-brand::before{width:31px;height:34px}.halloween-note{padding:13px 16px;gap:10px;margin-bottom:2rem}.halloween-note img{width:50px;height:50px}.halloween-note strong{font-size:1.05rem}.halloween-note span{font-size:.8rem}.columns>.column:first-child img{box-shadow:4px 4px 0 var(--pumpkin)}}
-@media(prefers-reduced-motion:reduce){.quick-links a:hover{transform:none}}
-@media print{html,body{background:white;box-shadow:none}.halloween-note,.navbar-brand::before,.nav-footer-center::after{display:none}}
+/* A quiet autumn palette inspired by vintage comics and storybook illustration. */
+:root{--paper:#fbf8f1;--ink:#352f2d;--muted:#776d64;--blue:#eee7d9;--pink:#eadfce;--line:#ded4c5;--link:#78513c}
+html{background:#eee8dc}body{background:var(--paper);color:var(--ink);min-height:100vh;box-shadow:0 0 0 1px #e5ddcf}
+a:hover{color:#9b5433}a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#967b55}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.025em}h1.title{line-height:1.22}h2{border-bottom:1px solid var(--line)}
+.navbar{background:var(--paper)!important;border-bottom:1px solid #cbbb9f;box-shadow:none;padding-top:1.1rem;padding-bottom:1.1rem}
+.navbar-brand{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.35rem;letter-spacing:.015em}
+.navbar-nav .nav-link{color:#625448!important;border-radius:0;font-size:.9rem;letter-spacing:.025em}
+.navbar-nav .nav-link.active{background:transparent;border-bottom:2px solid #9a6545;color:var(--ink)!important}
+.navbar-nav .nav-link:hover{background:#f2ebdf}.navbar-toggler{border-color:#baaa94;border-radius:3px}
+#quarto-search .aa-SubmitIcon{fill:#746657}
+.quarto-category{background:transparent!important;border:1px solid #cdbba3!important;border-radius:2px!important;color:#75583c!important}
+.columns>.column:first-child img{border:6px solid #eee6d7;border-radius:3px;outline:none;box-shadow:none}
+.quick-links a,.unavailable-link{border-radius:3px}.quick-links a:hover{background:#eee4d4}
+.quarto-listing-default .quarto-post{border-color:var(--line)}.quarto-post .listing-title{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+.quarto-post .thumbnail img{background:#f5f0e7;border-radius:2px}
+.nav-footer{background:#eee7d9;border-top:1px solid #d6c7b1;color:#756555}
+.autumn-vignette{margin:0 0 2.5rem;border-bottom:1px solid #d8c9b1;padding-bottom:1.2rem}
+.autumn-vignette img{display:block;width:100%;max-height:245px;object-fit:contain;mix-blend-mode:multiply}
+.autumn-vignette figcaption{text-align:right;font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#876849;font-size:.8rem;letter-spacing:.03em;margin-top:.5rem}
+.sidebar nav[role=doc-toc] ul>li>a.active{border-left-color:#9a6545;color:#79543b!important}
+@media(max-width:767px){.navbar{padding:.8rem}.autumn-vignette{margin-bottom:1.6rem;padding-bottom:.7rem}.autumn-vignette img{max-height:180px}.autumn-vignette figcaption{font-size:.75rem}.navbar-brand{font-size:1.2rem}}
+@media print{html,body{background:white;box-shadow:none}.autumn-vignette{display:none}}

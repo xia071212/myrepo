@@ -2,10 +2,10 @@
 title: ""
 ---
 
-<div class="halloween-note">
-  <img src="images/halloween/ghost.svg" alt="" aria-hidden="true">
-  <p><strong>A little curiosity. A little boo.</strong><span>Happy Halloween — welcome to my corner of the web.</span></p>
-</div>
+<figure class="autumn-vignette">
+  <img src="images/halloween/autumn-reading.png" alt="A vintage comic illustration of Snoopy reading beside autumn pumpkins, books, and a wizard hat.">
+  <figcaption>October, between the pages.</figcaption>
+</figure>
 
 ::::: columns
 ::: {.column width="35%"}
