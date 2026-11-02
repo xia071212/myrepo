@@ -1,3 +1,22 @@
 .blog8-post #title-block-header .description{font-style:italic;font-weight:400}
 .blog8-post img[src$="illustration.png"]{max-height:420px;width:100%;object-fit:contain}
 .blog8-post .source-note{font-size:.85rem;border-top:1px solid #ddd;padding-top:1rem}
+/* Interactive elements use the shared blog typography and native section layout. */
+.blog8-post main .prose{margin:22px 0;line-height:1.8}
+.blog8-post main .controls{display:flex;align-items:flex-end;flex-wrap:wrap;gap:14px;padding:20px;background:#f4eee3;border:1px solid #ded4c5;border-radius:3px;margin:26px 0 18px}
+.blog8-post main label{font-size:12px;font-weight:bold;flex:1;min-width:135px;color:#594335}
+.blog8-post main input{display:block;width:100%;margin-top:8px;padding:10px;border:1px solid #cdbba3;border-radius:3px;background:white;color:#352f2d;font:16px Arial,sans-serif}
+.blog8-post main button{border:0;border-radius:3px;background:#78513c;color:white;padding:13px 16px;font-weight:600;cursor:pointer;line-height:1.2}
+.blog8-post main button:hover{background:#60432d}
+.blog8-post main button:disabled{opacity:.5;cursor:wait}
+.blog8-post main input:focus,.blog8-post main button:focus-visible{outline:3px solid #d4a35f;outline-offset:3px}
+.blog8-post main .figure{display:block;width:100%;background:#fff;border:1px solid #e4d5bf;border-radius:5px;padding:12px;margin:15px 0}
+.blog8-post main .figure svg{display:block;width:100%;height:auto}
+.blog8-post main .readout{font-size:14px;line-height:1.65;border-left:3px solid #9a6545;padding:12px 18px;background:#f1eadf}
+.blog8-post main .equation{font-size:17px;text-align:center;background:#f1eadf;border-radius:8px;padding:17px}
+.blog8-post main .control-help{color:#776d64;font-size:.78rem;line-height:1.6;margin:0 0 20px}
+.blog8-post main footer{border-top:1px solid #ded4c5;margin-top:40px;padding-top:20px;font-size:12px;color:#776d64}
+.blog8-post main .footer-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.blog8-post main .secondary{background:#eee4d4;color:#594335}
+.blog8-post main #status{background:#f1eadf;padding:10px;border-radius:6px}
+@media(max-width:600px){.blog8-post main .figure{padding:4px;overflow:auto}.blog8-post main .figure svg{min-width:540px}.blog8-post main .controls{padding:14px}.blog8-post main button{width:100%}}

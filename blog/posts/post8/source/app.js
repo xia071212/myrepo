@@ -24,12 +24,12 @@ const workerCode=document.getElementById('engine').textContent+`\nonmessage = ({
 async function update(mode){
  let p;try{p=read(mode==='sample'?['n','mu','seed']:mode==='bootstrap'?['B','confidence','R']:['nullMean','M','alpha']);}catch(e){$('status').textContent=e.message;return;}
  const redraw=mode==='sample'?current.redraw+1:current.redraw;
- document.querySelectorAll('button,input').forEach(e=>e.disabled=true);
+ (document.getElementById('quarto-document-content') || document).querySelectorAll('button,input').forEach(e=>e.disabled=true);
  $('status').textContent='Computing actual samples and resamples…';
  const url=URL.createObjectURL(new Blob([workerCode],{type:'text/javascript'})),worker=new Worker(url);
  worker.onmessage=({data})=>{current=data;render(current);finish('Updated. All figures and readouts show the applied settings.');};
  worker.onerror=e=>finish('Simulation could not finish: '+e.message);
- function finish(message){worker.terminate();URL.revokeObjectURL(url);document.querySelectorAll('button,input').forEach(e=>e.disabled=false);$('status').textContent=message;}
+ function finish(message){worker.terminate();URL.revokeObjectURL(url);(document.getElementById('quarto-document-content') || document).querySelectorAll('button,input').forEach(e=>e.disabled=false);$('status').textContent=message;}
  worker.postMessage({p,redraw,mode,previous:mode==='test'?current:null});
 }
 $('redraw').onclick=()=>update('sample');$('resample').onclick=()=>update('bootstrap');$('test').onclick=()=>update('test');
