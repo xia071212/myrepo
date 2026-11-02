@@ -1,0 +1,37 @@
+---
+title: "How Can One Sample Tell Us About an Entire Population?"
+description: "How can a household survey quantify uncertainty and test a claim about average spending?"
+author: "Yuting Xia"
+date: 2026-11-01
+date-format: "MMMM D, YYYY"
+categories: [Simulation, Bootstrap, Statistical Inference]
+body-classes: blog8-post
+image: illustration.png
+image-alt: "Watercolor illustration of household survey cards and a neighborhood, connecting a sample to its population."
+toc: false
+css: blog8.css
+resources:
+  - interactive.html
+  - replication.zip
+  - README.md
+---
+
+A city economist cannot interview every household before estimating monthly spending. Statistical inference measures uncertainty across samples. Here, you can draw households, build confidence intervals, and test a spending claim in a city whose true mean we know.
+
+![](illustration.png){fig-alt="An economist studies household survey cards and spending receipts beside a window overlooking the wider community."}
+
+```{=html}
+<iframe id="inference-demo" src="interactive.html" title="Interactive household spending: sampling, bootstrap confidence intervals and hypothesis tests" style="width:100%;height:5300px;border:0;" loading="eager"></iframe>
+<script>
+const inferenceFrame=document.getElementById("inference-demo");
+inferenceFrame.addEventListener("load",()=>{
+ const main=inferenceFrame.contentDocument.querySelector("main");
+ const resize=()=>{inferenceFrame.style.height=Math.ceil(main.getBoundingClientRect().height+30)+"px"};
+ new ResizeObserver(resize).observe(main);resize();
+});
+</script>
+```
+
+::: {.source-note}
+**Data and replication.** All households are simulated. [GitHub replication repository](https://github.com/xia071212/blog8repo) and [download the complete replication files](replication.zip) or read the [reproduction instructions and model assumptions](README.md). The watercolor illustration is AI-generated; all six analytical figures are computed from the simulation.
+:::

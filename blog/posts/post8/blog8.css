@@ -1,0 +1,3 @@
+.blog8-post #title-block-header .description{font-style:italic;font-weight:400}
+.blog8-post img[src$="illustration.png"]{max-height:420px;width:100%;object-fit:contain}
+.blog8-post .source-note{font-size:.85rem;border-top:1px solid #ddd;padding-top:1rem}
