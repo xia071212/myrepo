@@ -9,6 +9,9 @@ parser.add_argument('replication_dir', type=Path)
 replication = parser.parse_args().replication_dir.resolve()
 post = Path(__file__).resolve().parents[1]
 shutil.copy2(replication / 'README.md', post / 'README.md')
+# The replication repository owns the simulation code; the website deploys copies.
+for name in ['simulation.mjs', 'charts.mjs', 'app.js', 'verify.mjs']:
+    shutil.copy2(replication / 'code' / 'javascript' / name, post / 'source' / name)
 with zipfile.ZipFile(post / 'replication.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
     for path in sorted(replication.rglob('*')):
         relative = path.relative_to(replication)
