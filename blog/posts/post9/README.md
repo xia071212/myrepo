@@ -65,13 +65,13 @@ Validation forecasts are also evaluated every 20 sessions. The selected configur
 |---|---|---|
 | Original XGBoost | OHLCV, adjusted price, daily stock/SPY returns, original inverse-ratio momentum and reversal, 22-session lagged volatility, current market-relative return | 300 trees; depth 5; learning rate 0.05; minimum child weight 10; full row/column samples; L2 penalty 1 |
 | Modified XGBoost | Conventional 21/63/126-session momentum and 5-session return ending at $t-1$; 21-session lagged volatility; 21/63-session momentum relative to SPY; stock-minus-SPY return at $t-1$ | Selected: 150 trees; depth 2; learning rate 0.03; minimum child weight 20; row/column samples 0.8; L2 penalty 10 |
-| Historical mean | Each stock's average target in the final training sample | Fixed during testing; the same ten stocks remain selected, with weights restored at each rebalance |
+| Historical mean | Each stock's average of 353 rolling 20-trading-day returns; training signal dates July 7, 2022–November 29, 2023 | Fixed during testing; the same ten stocks remain selected, with weights restored at each rebalance |
 
 Both XGBoost models use squared-error loss, histogram trees, gamma 0 and seed 123; dates and stock symbols are identifiers. The modified model removes raw price scales and replaces inverse classroom momentum ratios with conventional past returns.
 
 The eight modified-model candidates cross depths 2/3, learning rates 0.03/0.05 and tree counts 150/300. Selection minimizes equally weighted mean validation MSE across the two folds, with deterministic candidate order for ties. The Python implementation preserves the classroom model's features and specified parameters; it is not an exact rerun of the instructor's R software stack. The data snapshot, target alignment, purging, evaluation dates and equal weighting are standardized across methods. The original script's mismatched SPY return windows and monthly/daily annualization are not used.
 
-For the historical-mean benchmark, $\mathcal{T}_i$ contains stock $i$'s eligible training observations:
+The historical mean averages **353 rolling 20-trading-day returns per stock**, not the most recent 20 daily returns. Signal dates run from **July 7, 2022 to November 29, 2023**; the corresponding holdings begin from July 8, 2022 through November 30, 2023, and the final return ends on December 29, 2023. Windows advance one trading day at a time and overlap. This uses the same training observations as both models; the resulting mean stays fixed throughout testing. In the formula, $\mathcal{T}_i$ is that training set and $N_i=353$:
 
 $$
 \widehat y^{\mathrm{mean}}_{i,t}
@@ -84,18 +84,15 @@ $$
 For method $m$, let $\mathcal{E}$ contain the $N=3{,}325$ test observations. RMSE is reported in percentage points:
 
 $$
-\operatorname{RMSE}_{m,\mathrm{pp}}
+\mathrm{RMSE}_{m,\mathrm{pp}}
 =100\sqrt{\frac{1}{N}\sum_{(i,t)\in\mathcal{E}}
 \left(\widehat y^m_{i,t}-y_{i,t}\right)^2}.
 $$
 
-Rank correlation is calculated across the 95 stocks at each signal date, then averaged equally over the $K=35$ dates:
+Rank correlation is calculated across the 95 stocks at each signal date. Let $\rho_{m,t}$ be the Spearman correlation between method $m$'s predicted returns and realized returns on date $t$. Average it across the $K=35$ test dates:
 
 $$
-\operatorname{IC}_m
-=\frac{1}{K}\sum_{t=1}^{K}
-\operatorname{SpearmanCorr}_{i}
-\left(\widehat y^m_{i,t},y_{i,t}\right).
+\mathrm{IC}_m=\frac{1}{K}\sum_{t=1}^{K}\rho_{m,t}.
 $$
 
 Lower RMSE and higher rank correlation are better. Both evaluate all 95 stocks; the portfolio holds only the selected top ten. Neither metric alone measures the investment return of those holdings.
@@ -115,44 +112,6 @@ Lower RMSE and higher rank correlation are better. Both evaluate all 95 stocks; 
 | Cost sensitivity | Repeat the ledger with rates 0 and 0.2% |
 
 Fractional adjusted-price units model distribution-adjusted exposure, not literal executable share quotes. Close fills assume sufficient liquidity and no additional execution shortfall beyond the stated cost rate.
-
-At a rebalance, $a_i$ is the existing dollar position, $w_i$ is the target weight, $V^{-}$ is pretrade wealth, $c$ is the cost rate and $z$ is post-cost invested wealth. The ledger solves:
-
-$$
-z+c\sum_i\left|w_i z-a_i\right|=V^{-},
-\qquad
-w_i=\begin{cases}
-0.1,&i\text{ is selected},\\
-0,&\text{otherwise}.
-\end{cases}
-$$
-
-Fees are paid from the portfolio, never borrowed. Trading volume relative to pretrade wealth is:
-
-$$
-\operatorname{Turnover}_t
-=\frac{\sum_i\left|w_i z-a_i\right|}{V^{-}}.
-$$
-
-The reported mean excludes initial entry and final liquidation, although both are charged in returns. A value of 140% means purchases plus sales equal 1.4 times portfolio wealth, not 140% one-way replacement.
-
-For each holding period, gross return is the average realized return of the selected stocks. Compounding and maximum drawdown are calculated as follows:
-
-$$
-R^{m,\mathrm{gross}}_t=\sum_i w^m_{i,t}y_{i,t},
-\qquad
-R^{m,\mathrm{gross}}_{\mathrm{total}}
-=\prod_{t=1}^{K}\left(1+R^{m,\mathrm{gross}}_t\right)-1.
-$$
-
-$$
-R^{m,\mathrm{net}}_{\mathrm{total}}=\frac{V^m_T}{V^m_0}-1,
-\qquad
-\operatorname{MDD}_m
-=\max_d\left(1-\frac{V^m_d}{\max_{u\le d}V^m_u}\right).
-$$
-
-Here $V^m_d$ is daily wealth after applicable costs. Gross and net ledgers are simulated separately because fees change subsequent position sizes. Their final-wealth difference includes foregone compounding, not just fees paid.
 
 ## Code and their roles
 
