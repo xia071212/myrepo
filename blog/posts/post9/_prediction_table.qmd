@@ -1,0 +1,5 @@
+| Forecast | RMSE (pp) ↓ | Mean rank correlation ↑ |
+|:--|--:|--:|
+| Original XGBoost | 9.91 | 0.037 |
+| Modified XGBoost | 9.41 | 0.030 |
+| Historical mean | 9.43 | 0.028 |

@@ -1,0 +1,7 @@
+| Strategy | Gross return | Net return | Maximum drawdown | Trading per rebalance¹ |
+|:--|--:|--:|--:|--:|
+| Original XGBoost | 96.7% | 87.6% | 17.7% | 133.8% |
+| Modified XGBoost | 140.8% | 128.6% | 16.4% | 147.5% |
+| Historical mean | 146.4% | 145.3% | 23.8% | 6.8% |
+
+¹ Purchases plus sales divided by pretrade wealth; excludes initial entry and final liquidation. Both are included in returns.

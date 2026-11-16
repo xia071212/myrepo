@@ -1,0 +1,5 @@
+.blog9-post #title-block-header .description {font-style:italic;font-weight:400}
+.blog9-post img[src$="illustration.png"] {max-height:420px;width:100%;object-fit:contain}
+.blog9-post .source-note {font-size:.85rem;border-top:1px solid #ddd;padding-top:1rem}
+.blog9-post .quarto-figure {margin:1.6rem 0}
+.blog9-post table {font-size:.92rem}
